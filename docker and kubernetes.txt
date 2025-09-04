@@ -1,0 +1,2886 @@
+C:\Users\Lenovo>ssh inixindo@192.168.8.98
+The authenticity of host '192.168.8.98 (192.168.8.98)' can't be established.
+ED25519 key fingerprint is SHA256:CZvsX7MfpEtq8yv+x2iZ2fEKxotNcPk0i6uT0Sr8pPw.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.8.98' (ED25519) to the list of known hosts.
+inixindo@192.168.8.98's password:
+Linux SERVER1 6.1.0-22-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.94-1 (2024-06-21) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct 25 00:05:45 2024 from 192.168.10.193
+inixindo@SERVER1:~$ pwd
+/home/inixindo
+inixindo@SERVER1:~$ ls -al
+total 92
+drwx------ 17 inixindo inixindo 4096 Oct 25  2024 .
+drwxr-xr-x  4 root     root     4096 Oct 25  2024 ..
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 .anydesk
+-rw-------  1 inixindo inixindo  103 Oct 25  2024 .bash_history
+-rw-r--r--  1 inixindo inixindo  220 Oct 25  2024 .bash_logout
+-rw-r--r--  1 inixindo inixindo 3526 Oct 25  2024 .bashrc
+drwx------ 11 inixindo inixindo 4096 Oct 25  2024 .cache
+drwxr-xr-x 10 inixindo inixindo 4096 Oct 25  2024 .config
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 Desktop
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 Documents
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 Downloads
+-rw-r--r--  1 inixindo inixindo 5290 Oct 25  2024 .face
+lrwxrwxrwx  1 inixindo inixindo    5 Oct 25  2024 .face.icon -> .face
+drwx------  2 inixindo inixindo 4096 Oct 25  2024 .gnupg
+drwx------  4 inixindo inixindo 4096 Oct 25  2024 .local
+drwx------  4 inixindo inixindo 4096 Oct 25  2024 .mozilla
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 Music
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 Pictures
+-rw-r--r--  1 inixindo inixindo  807 Oct 25  2024 .profile
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 Public
+drwx------  2 inixindo inixindo 4096 Oct 25  2024 .ssh
+-rw-r--r--  1 inixindo inixindo    0 Oct 25  2024 .sudo_as_admin_successful
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 Templates
+drwxr-xr-x  2 inixindo inixindo 4096 Oct 25  2024 Videos
+inixindo@SERVER1:~$ cd ..
+inixindo@SERVER1:/home$ ls -al
+total 16
+drwxr-xr-x  4 root     root     4096 Oct 25  2024 .
+drwxr-xr-x 19 root     root     4096 Jul 13  2024 ..
+drwx------ 17 inixindo inixindo 4096 Oct 25  2024 inixindo
+drwx------ 15     1000     1000 4096 Oct 25  2024 osboxes
+inixindo@SERVER1:/home$ cd inixindo/
+inixindo@SERVER1:~$ df -kh
+Filesystem      Size  Used Avail Use% Mounted on
+udev            1.9G     0  1.9G   0% /dev
+tmpfs           389M  1.4M  387M   1% /run
+/dev/sda1       485G  4.8G  456G   2% /
+tmpfs           1.9G  148K  1.9G   1% /dev/shm
+tmpfs           5.0M  8.0K  5.0M   1% /run/lock
+tmpfs           389M   92K  388M   1% /run/user/1001
+inixindo@SERVER1:~$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   500G  0 disk
+├─sda1   8:1    0 493.6G  0 part /
+└─sda2   8:2    0   6.4G  0 part [SWAP]
+sr0     11:0    1  1024M  0 rom
+inixindo@SERVER1:~$ sudo nano /etc/hostname
+[sudo] password for inixindo:
+Sorry, try again.
+[sudo] password for inixindo:
+inixindo@SERVER1:~$ inixindo@SERVER1:~$
+inixindo@SERVER1:~$
+inixindo@SERVER1:~$ sudo adduser docker
+Adding user `docker' ...
+Adding new group `docker' (1000) ...
+Adding new user `docker' (1000) with group `docker (1000)' ...
+Creating home directory `/home/docker' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for docker
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+Adding new user `docker' to supplemental / extra groups `users' ...
+Adding user `docker' to group `users' ...
+inixindo@SERVER1:~$ sudo usermod -G sudo docker
+inixindo@SERVER1:~$ sudo nano /etc/host
+host.conf    hostname     hosts        hosts.allow  hosts.deny
+inixindo@SERVER1:~$ sudo nano /etc/hostname
+inixindo@SERVER1:~$ sudo reboot
+
+Broadcast message from root@SERVER1 on pts/2 (Mon 2025-09-01 04:19:29 EDT):
+
+The system will reboot now!
+
+inixindo@SERVER1:~$ Connection to 192.168.8.98 closed by remote host.
+Connection to 192.168.8.98 closed.
+
+C:\Users\Lenovo>ping 192.168.8.98 -t
+
+Pinging 192.168.8.98 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Reply from 192.168.8.98: bytes=32 time=14ms TTL=64
+Reply from 192.168.8.98: bytes=32 time=4ms TTL=64
+Reply from 192.168.8.98: bytes=32 time=6ms TTL=64
+
+Ping statistics for 192.168.8.98:
+    Packets: Sent = 7, Received = 3, Lost = 4 (57% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 14ms, Average = 8ms
+Control-C
+^C
+C:\Users\Lenovo>ssh docker@192.168.8.98
+docker@192.168.8.98's password:
+Linux server1 6.1.0-22-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.94-1 (2024-06-21) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+docker@server1:~$ sudo apt-get install update
+[sudo] password for docker:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package update
+docker@server1:~$ sudo apt-get update
+Hit:1 http://security.debian.org/debian-security bookworm-security InRelease
+Get:2 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:4 http://deb.debian.org/debian bookworm/non-free-firmware Sources [7,148 B]
+Get:5 http://deb.debian.org/debian bookworm/main Sources [9,494 kB]
+Get:6 http://deb.debian.org/debian bookworm/main amd64 Packages [8,793 kB]
+Get:7 http://deb.debian.org/debian bookworm/main Translation-en [6,109 kB]
+Get:8 http://deb.debian.org/debian bookworm/non-free-firmware amd64 Packages [6,372 B]
+Get:9 http://deb.debian.org/debian bookworm/non-free-firmware Translation-en [20.9 kB]
+Get:10 http://deb.debian.org/debian bookworm-updates/main Sources.diff/Index [21.8 kB]
+Ign:10 http://deb.debian.org/debian bookworm-updates/main Sources.diff/Index
+Get:11 http://deb.debian.org/debian bookworm-updates/main amd64 Packages.diff/Index [21.8 kB]
+Ign:11 http://deb.debian.org/debian bookworm-updates/main amd64 Packages.diff/Index
+Get:12 http://deb.debian.org/debian bookworm-updates/main Translation-en.diff/Index [20.7 kB]
+Ign:12 http://deb.debian.org/debian bookworm-updates/main Translation-en.diff/Index
+Get:13 http://deb.debian.org/debian bookworm-updates/main Sources [3,288 B]
+Get:14 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6,924 B]
+Get:15 http://deb.debian.org/debian bookworm-updates/main Translation-en [5,448 B]
+Fetched 24.7 MB in 35s (714 kB/s)
+Reading package lists... Done
+N: Repository 'http://deb.debian.org/debian bookworm InRelease' changed its 'Version' value from '12.7' to '12.11'
+N: Repository 'http://deb.debian.org/debian bookworm InRelease' changed its 'Suite' value from 'stable' to 'oldstable'
+N: Repository 'http://deb.debian.org/debian bookworm-updates InRelease' changed its 'Suite' value from 'stable-updates' to 'oldstable-updates'
+docker@server1:~$ sudo apt-get update
+Get:1 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Hit:2 http://deb.debian.org/debian bookworm InRelease
+Hit:3 http://deb.debian.org/debian bookworm-updates InRelease
+Fetched 48.0 kB in 31s (1,561 B/s)
+Reading package lists... Done
+docker@server1:~$ sudo apt-get install update
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package update
+docker@server1:~$ sudo nano /etc/re
+reportbug.conf  resolv.conf
+docker@server1:~$ sudo nano /etc/ap
+apache2/        apg.conf        apparmor/       apparmor.d/     appstream.conf  apt/
+docker@server1:~$ sudo nano /etc/apt/sources.list
+docker@server1:~$ sudo apt update
+Get:1 http://repo.ugm.ac.id/debian bookworm InRelease [151 kB]
+Get:2 http://repo.ugm.ac.id/debian bookworm-updates InRelease [55.4 kB]
+Ign:3 http://repo.ugm.ac.id/debian-security bookworm/updates InRelease
+Get:4 http://repo.ugm.ac.id/debian bookworm/main amd64 Packages [8,792 kB]
+Get:5 http://repo.ugm.ac.id/debian bookworm/main Translation-en [6,109 kB]
+Get:6 http://repo.ugm.ac.id/debian bookworm/main amd64 DEP-11 Metadata [4,492 kB]
+Get:7 http://repo.ugm.ac.id/debian bookworm/main DEP-11 48x48 Icons [3,595 kB]
+Get:8 http://repo.ugm.ac.id/debian bookworm/main DEP-11 64x64 Icons [7,295 kB]
+Get:9 http://repo.ugm.ac.id/debian bookworm/contrib amd64 Packages [54.1 kB]
+Get:10 http://repo.ugm.ac.id/debian bookworm/contrib Translation-en [48.8 kB]
+Get:11 http://repo.ugm.ac.id/debian bookworm/contrib amd64 DEP-11 Metadata [16.5 kB]
+Get:12 http://repo.ugm.ac.id/debian bookworm/contrib DEP-11 48x48 Icons [52.7 kB]
+Get:13 http://repo.ugm.ac.id/debian bookworm/contrib DEP-11 64x64 Icons [106 kB]
+Err:14 http://repo.ugm.ac.id/debian-security bookworm/updates Release
+  404  Not Found [IP: 202.43.92.246 80]
+Get:15 http://repo.ugm.ac.id/debian bookworm/non-free amd64 Packages [97.3 kB]
+Get:16 http://repo.ugm.ac.id/debian bookworm/non-free Translation-en [67.0 kB]
+Get:17 http://repo.ugm.ac.id/debian bookworm/non-free amd64 DEP-11 Metadata [4,428 B]
+Get:18 http://repo.ugm.ac.id/debian bookworm/non-free DEP-11 48x48 Icons [748 B]
+Get:19 http://repo.ugm.ac.id/debian bookworm/non-free DEP-11 64x64 Icons [27.5 kB]
+Reading package lists... Done
+E: Release file for http://repo.ugm.ac.id/debian/dists/bookworm-updates/InRelease is expired (invalid since 115d 23h 33min 44s). Updates for this repository will not be applied.
+E: The repository 'http://repo.ugm.ac.id/debian-security bookworm/updates Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+N: Repository 'Debian bookworm' changed its 'non-free component' value from 'non-free' to 'non-free non-free-firmware'
+N: More information about this can be found online in the Release notes at: https://www.debian.org/releases/bookworm/amd64/release-notes/ch-information.html#non-free-split
+docker@server1:~$ cat /etc/os-release
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+docker@server1:~$ sudo nano /etc/apt/sources.list
+docker@server1:~$ sudo apt-get update
+Hit:1 http://repo.ugm.ac.id/debian bookworm InRelease
+Get:2 http://repo.ugm.ac.id/debian bookworm-updates InRelease [55.4 kB]
+Ign:3 http://repo.ugm.ac.id/debian-security bookworm/updates InRelease
+Err:4 http://repo.ugm.ac.id/debian-security bookworm/updates Release
+  404  Not Found [IP: 202.43.92.246 80]
+Ign:5 https://kebo.pens.ac.id/debian bookworm InRelease
+Ign:6 https://kebo.pens.ac.id/debian bookworm-updates InRelease
+Ign:7 https://kebo.pens.ac.id/debian-security bookworm/updates InRelease
+Ign:5 https://kebo.pens.ac.id/debian bookworm InRelease
+Ign:6 https://kebo.pens.ac.id/debian bookworm-updates InRelease
+Ign:7 https://kebo.pens.ac.id/debian-security bookworm/updates InRelease
+Ign:5 https://kebo.pens.ac.id/debian bookworm InRelease
+Ign:6 https://kebo.pens.ac.id/debian bookworm-updates InRelease
+Ign:7 https://kebo.pens.ac.id/debian-security bookworm/updates InRelease
+Err:5 https://kebo.pens.ac.id/debian bookworm InRelease
+  Cannot initiate the connection to kebo.pens.ac.id:443 (2001:df0:a8:85::18). - connect (101: Network is unreachable) Could not connect to kebo.pens.ac.id:443 (202.9.85.18), connection timed out
+Err:6 https://kebo.pens.ac.id/debian bookworm-updates InRelease
+  Cannot initiate the connection to kebo.pens.ac.id:443 (2001:df0:a8:85::18). - connect (101: Network is unreachable)
+Err:7 https://kebo.pens.ac.id/debian-security bookworm/updates InRelease
+  Cannot initiate the connection to kebo.pens.ac.id:443 (2001:df0:a8:85::18). - connect (101: Network is unreachable)
+Reading package lists... Done
+E: Release file for http://repo.ugm.ac.id/debian/dists/bookworm-updates/InRelease is expired (invalid since 115d 23h 37min 27s). Updates for this repository will not be applied.
+E: The repository 'http://repo.ugm.ac.id/debian-security bookworm/updates Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+N: Repository 'Debian bookworm' changed its 'non-free component' value from 'non-free' to 'non-free non-free-firmware'
+N: More information about this can be found online in the Release notes at: https://www.debian.org/releases/bookworm/amd
+
+docker@server1:~$ sudo apt-get update
+Get:1 http://kartolo.sby.datautama.net.id/debian bookworm InRelease [151 kB]
+Get:2 http://kartolo.sby.datautama.net.id/debian bookworm-updates InRelease [55.4 kB]
+Ign:3 http://kartolo.sby.datautama.net.id/debian-security bookworm/updates InRelease
+Get:4 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 Packages [8,793 kB]
+Ign:4 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 Packages
+Get:5 http://kartolo.sby.datautama.net.id/debian bookworm/main Translation-en [6,109 kB]
+Get:6 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 DEP-11 Metadata [4,492 kB]
+Ign:6 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 DEP-11 Metadata
+Get:7 http://kartolo.sby.datautama.net.id/debian bookworm/main DEP-11 48x48 Icons [3,595 kB]
+Get:8 http://kartolo.sby.datautama.net.id/debian bookworm/main DEP-11 64x64 Icons [7,295 kB]
+Get:9 http://kartolo.sby.datautama.net.id/debian bookworm/contrib amd64 Packages [53.5 kB]
+Get:10 http://kartolo.sby.datautama.net.id/debian bookworm/contrib Translation-en [48.4 kB]
+Get:11 http://kartolo.sby.datautama.net.id/debian bookworm/contrib amd64 DEP-11 Metadata [16.5 kB]
+Get:12 http://kartolo.sby.datautama.net.id/debian bookworm/contrib DEP-11 48x48 Icons [52.7 kB]
+Get:13 http://kartolo.sby.datautama.net.id/debian bookworm/contrib DEP-11 64x64 Icons [106 kB]
+Err:14 http://kartolo.sby.datautama.net.id/debian-security bookworm/updates Release
+  404  Not Found [IP: 123.255.202.74 80]
+Get:15 http://kartolo.sby.datautama.net.id/debian bookworm/non-free amd64 Packages [102 kB]
+Get:16 http://kartolo.sby.datautama.net.id/debian bookworm/non-free Translation-en [68.1 kB]
+Get:17 http://kartolo.sby.datautama.net.id/debian bookworm/non-free amd64 DEP-11 Metadata [4,428 B]
+Get:18 http://kartolo.sby.datautama.net.id/debian bookworm/non-free DEP-11 48x48 Icons [748 B]
+Get:19 http://kartolo.sby.datautama.net.id/debian bookworm/non-free DEP-11 64x64 Icons [27.5 kB]
+Get:20 http://kartolo.sby.datautama.net.id/debian bookworm-updates/main amd64 Packages [6,924 B]
+Get:21 http://kartolo.sby.datautama.net.id/debian bookworm-updates/main Translation-en [5,448 B]
+Get:4 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 Packages [8,793 kB]
+Ign:4 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 Packages
+Get:6 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 DEP-11 Metadata [4,492 kB]
+Get:4 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 Packages [8,793 kB]
+Reading package lists... Done
+E: The repository 'http://kartolo.sby.datautama.net.id/debian-security bookworm/updates Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+N: Repository 'Debian bookworm' changed its 'non-free component' value from 'non-free' to 'non-free non-free-firmware'
+N: More information about this can be found online in the Release notes at: https://www.debian.org/releases/bookworm/amd64/release-notes/ch-information.html#non-free-split
+docker@server1:~$ sudo nano /etc/apt/sources.list
+docker@server1:~$ sudo apt-get update
+Hit:1 http://kartolo.sby.datautama.net.id/debian bookworm InRelease
+Hit:2 http://kartolo.sby.datautama.net.id/debian bookworm-updates InRelease
+Get:3 http://kartolo.sby.datautama.net.id/debian bookworm-backports InRelease [59.4 kB]
+Get:4 http://kartolo.sby.datautama.net.id/debian bookworm/non-free Sources [77.9 kB]
+Get:5 http://kartolo.sby.datautama.net.id/debian bookworm/non-free-firmware Sources [7,148 B]
+Get:6 http://kartolo.sby.datautama.net.id/debian bookworm/contrib Sources [51.0 kB]
+Get:7 http://kartolo.sby.datautama.net.id/debian bookworm/main Sources [9,494 kB]
+Ign:7 http://kartolo.sby.datautama.net.id/debian bookworm/main Sources
+Get:8 http://kartolo.sby.datautama.net.id/debian bookworm/non-free-firmware amd64 Packages [6,372 B]
+Get:9 http://kartolo.sby.datautama.net.id/debian bookworm/non-free-firmware Translation-en [20.9 kB]
+Get:10 http://kartolo.sby.datautama.net.id/debian bookworm/non-free-firmware amd64 DEP-11 Metadata [15.5 kB]
+Get:11 http://kartolo.sby.datautama.net.id/debian bookworm/non-free-firmware DEP-11 48x48 Icons [29 B]
+Get:12 http://kartolo.sby.datautama.net.id/debian bookworm/non-free-firmware DEP-11 64x64 Icons [29 B]
+Get:13 http://kartolo.sby.datautama.net.id/debian bookworm-updates/main Sources [3,288 B]
+Get:14 http://kartolo.sby.datautama.net.id/debian bookworm-backports/non-free-firmware Sources [2,280 B]
+Get:15 http://kartolo.sby.datautama.net.id/debian bookworm-backports/contrib Sources [4,212 B]
+Get:16 http://kartolo.sby.datautama.net.id/debian bookworm-backports/non-free Sources [2,944 B]
+Get:17 http://kartolo.sby.datautama.net.id/debian bookworm-backports/main Sources [287 kB]
+Get:18 http://kartolo.sby.datautama.net.id/debian bookworm-backports/main amd64 Packages [296 kB]
+Get:19 http://kartolo.sby.datautama.net.id/debian bookworm-backports/main Translation-en [250 kB]
+Get:20 http://kartolo.sby.datautama.net.id/debian bookworm-backports/contrib amd64 Packages [5,856 B]
+Get:21 http://kartolo.sby.datautama.net.id/debian bookworm-backports/contrib Translation-en [5,864 B]
+Get:22 http://kartolo.sby.datautama.net.id/debian bookworm-backports/non-free amd64 Packages [13.3 kB]
+Get:23 http://kartolo.sby.datautama.net.id/debian bookworm-backports/non-free Translation-en [8,460 B]
+Get:24 http://kartolo.sby.datautama.net.id/debian bookworm-backports/non-free-firmware amd64 Packages [3,828 B]
+Get:25 http://kartolo.sby.datautama.net.id/debian bookworm-backports/non-free-firmware Translation-en [2,860 B]
+Get:7 http://kartolo.sby.datautama.net.id/debian bookworm/main Sources [9,494 kB]
+Ign:7 http://kartolo.sby.datautama.net.id/debian bookworm/main Sources
+Get:7 http://kartolo.sby.datautama.net.id/debian bookworm/main Sources [9,494 kB]
+Ign:26 http://deb.debian.org/debian-security bookworm-security InRelease
+Ign:26 http://deb.debian.org/debian-security bookworm-security InRelease
+Ign:26 http://deb.debian.org/debian-security bookworm-security InRelease
+Err:26 http://deb.debian.org/debian-security bookworm-security InRelease
+  Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42:7b::644). - connect (101: Network is unreachable) Could not connect to debian.map.fastlydns.net:80 (146.75.46.132), connection timed out Cannot initiate the connection to deb.debian.org:80 (2a04:4e42:7b::644). - connect (101: Network is unreachable)
+Ign:7 http://kartolo.sby.datautama.net.id/debian bookworm/main Sources
+Get:7 http://kartolo.sby.datautama.net.id/debian bookworm/main Sources [9,494 kB]
+Fetched 2,831 kB in 1min 10s (40.2 kB/s)
+Reading package lists... Done
+W: Failed to fetch http://deb.debian.org/debian-security/dists/bookworm-security/InRelease  Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42:7b::644). - connect (101: Network is unreachable) Could not connect to debian.map.fastlydns.net:80 (146.75.46.132), connection timed out Cannot initiate the connection to deb.debian.org:80 (2a04:4e42:7b::644). - connect (101: Network is unreachable)
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+docker@server1:~$ sudo apt-get install update
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package update
+docker@server1:~$ sudo apt install update
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package update
+docker@server1:~$ sudo apt-get install curl apt-transport-https ca-certificates software-properties-common
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+software-properties-common is already the newest version (0.99.30-4.1~deb12u1).
+software-properties-common set to manually installed.
+The following additional packages will be installed:
+  libcurl3-gnutls libcurl4
+The following NEW packages will be installed:
+  apt-transport-https
+The following packages will be upgraded:
+  ca-certificates curl libcurl3-gnutls libcurl4
+4 upgraded, 1 newly installed, 0 to remove and 238 not upgraded.
+Need to get 1,273 kB of archives.
+After this operation, 46.1 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://kartolo.sby.datautama.net.id/debian bookworm-updates/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
+Get:2 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 apt-transport-https all 2.6.1 [25.2 kB]
+Get:3 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u12 [315 kB]
+Ign:3 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u12
+Get:4 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u12 [391 kB]
+Get:5 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u12 [386 kB]
+Get:3 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u12 [315 kB]
+Fetched 1,072 kB in 27s (39.8 kB/s)
+Reading changelogs... Done
+Preconfiguring packages ...
+(Reading database ... 146696 files and directories currently installed.)
+Preparing to unpack .../ca-certificates_20230311+deb12u1_all.deb ...
+Unpacking ca-certificates (20230311+deb12u1) over (20230311) ...
+Selecting previously unselected package apt-transport-https.
+Preparing to unpack .../apt-transport-https_2.6.1_all.deb ...
+Unpacking apt-transport-https (2.6.1) ...
+Preparing to unpack .../curl_7.88.1-10+deb12u12_amd64.deb ...
+Unpacking curl (7.88.1-10+deb12u12) over (7.88.1-10+deb12u7) ...
+Preparing to unpack .../libcurl4_7.88.1-10+deb12u12_amd64.deb ...
+Unpacking libcurl4:amd64 (7.88.1-10+deb12u12) over (7.88.1-10+deb12u7) ...
+Preparing to unpack .../libcurl3-gnutls_7.88.1-10+deb12u12_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u12) over (7.88.1-10+deb12u7) ...
+Setting up apt-transport-https (2.6.1) ...
+Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u12) ...
+Setting up ca-certificates (20230311+deb12u1) ...
+Updating certificates in /etc/ssl/certs...
+rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2 added, 0 removed; done.
+Setting up libcurl4:amd64 (7.88.1-10+deb12u12) ...
+Setting up curl (7.88.1-10+deb12u12) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u7) ...
+Processing triggers for ca-certificates (20230311+deb12u1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+docker@server1:~$ sudo apt-get update
+Hit:1 http://kartolo.sby.datautama.net.id/debian bookworm InRelease
+Hit:2 http://kartolo.sby.datautama.net.id/debian bookworm-updates InRelease
+Hit:3 http://kartolo.sby.datautama.net.id/debian bookworm-backports InRelease
+Ign:4 http://deb.debian.org/debian-security bookworm-security InRelease
+Ign:4 http://deb.debian.org/debian-security bookworm-security InRelease
+Ign:4 http://deb.debian.org/debian-security bookworm-security InRelease
+Err:4 http://deb.debian.org/debian-security bookworm-security InRelease
+  Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42::644). - connect (101: Network is unreachable) Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42:400::644). - connect (101: Network is unreachable) Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42:600::644). - connect (101: Network is unreachable) Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42:200::644). - connect (101: Network is unreachable) Could not connect to debian.map.fastlydns.net:80 (146.75.46.132), connection timed out Cannot initiate the connection to deb.debian.org:80 (2a04:4e42:7b::644). - connect (101: Network is unreachable)
+Reading package lists... Done
+W: Failed to fetch http://deb.debian.org/debian-security/dists/bookworm-security/InRelease  Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42::644). - connect (101: Network is unreachable) Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42:400::644). - connect (101: Network is unreachable) Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42:600::644). - connect (101: Network is unreachable) Cannot initiate the connection to debian.map.fastlydns.net:80 (2a04:4e42:200::644). - connect (101: Network is unreachable) Could not connect to debian.map.fastlydns.net:80 (146.75.46.132), connection timed out Cannot initiate the connection to deb.debian.org:80 (2a04:4e42:7b::644). - connect (101: Network is unreachable)
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+docker@server1:~$ client_loop: send disconnect: Connection reset
+
+C:\Users\Lenovo>ssh docker@192.168.8.98
+docker@192.168.8.98's password:
+Permission denied, please try again.
+docker@192.168.8.98's password:
+Linux server1 6.1.0-22-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.94-1 (2024-06-21) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Sep  1 04:20:30 2025 from 192.168.3.17
+docker@server1:~$ sudo apt-get update
+[sudo] password for docker:
+Get:1 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:2 http://deb.debian.org/debian-security bookworm-security/main Sources [150 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security/contrib Sources [856 B]
+Get:4 http://deb.debian.org/debian-security bookworm-security/non-free-firmware Sources [796 B]
+Get:5 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [277 kB]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main Translation-en [167 kB]
+Get:7 http://deb.debian.org/debian-security bookworm-security/contrib amd64 Packages [896 B]
+Get:8 http://deb.debian.org/debian-security bookworm-security/contrib Translation-en [652 B]
+Get:9 http://deb.debian.org/debian-security bookworm-security/non-free-firmware amd64 Packages [688 B]
+Get:10 http://deb.debian.org/debian-security bookworm-security/non-free-firmware Translation-en [472 B]
+Hit:11 http://kartolo.sby.datautama.net.id/debian bookworm InRelease
+Get:12 http://kartolo.sby.datautama.net.id/debian bookworm-updates InRelease [55.4 kB]
+Get:13 http://kartolo.sby.datautama.net.id/debian bookworm-backports InRelease [59.4 kB]
+Fetched 762 kB in 8s (97.9 kB/s)
+Reading package lists... Done
+docker@server1:~$ sudo apt-get install update
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package update
+docker@server1:~$ sudo apt install update
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package update
+docker@server1:~$ sudo apt-get install update
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package update
+docker@server1:~$ sudo apt-get install curl apt-transport-https ca-certificates software-properties-common
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+curl is already the newest version (7.88.1-10+deb12u12).
+apt-transport-https is already the newest version (2.6.1).
+ca-certificates is already the newest version (20230311+deb12u1).
+software-properties-common is already the newest version (0.99.30-4.1~deb12u1).
+0 upgraded, 0 newly installed, 0 to remove and 268 not upgraded.
+docker@server1:~$ curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+docker@server1:~$ echo \ "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \ $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+docker@server1:~$ sudo apt-get update
+Hit:1 http://deb.debian.org/debian-security bookworm-security InRelease
+Ign:2 https://download.docker.com/linux/debian \ InRelease
+Hit:3 http://kartolo.sby.datautama.net.id/debian bookworm InRelease
+Err:4 https://download.docker.com/linux/debian \ Release
+  404  Not Found [IP: 108.138.141.89 443]
+Hit:5 http://kartolo.sby.datautama.net.id/debian bookworm-updates InRelease
+Hit:6 http://kartolo.sby.datautama.net.id/debian bookworm-backports InRelease
+Reading package lists... Done
+E: The repository 'https://download.docker.com/linux/debian \ Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+docker@server1:~$ sudo apt-get update
+Hit:1 http://deb.debian.org/debian-security bookworm-security InRelease
+Ign:2 https://download.docker.com/linux/debian \ InRelease
+Err:3 https://download.docker.com/linux/debian \ Release
+  404  Not Found [IP: 108.138.141.89 443]
+Hit:4 http://kartolo.sby.datautama.net.id/debian bookworm InRelease
+Hit:5 http://kartolo.sby.datautama.net.id/debian bookworm-updates InRelease
+Hit:6 http://kartolo.sby.datautama.net.id/debian bookworm-backports InRelease
+Reading package lists... Done
+E: The repository 'https://download.docker.com/linux/debian \ Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+docker@server1:~$ sudo nano /etc/apt/sources.list
+sources.list    sources.list~   sources.list.d/
+docker@server1:~$ sudo nano /etc/apt/sources.list.d/docker.list
+docker@server1:~$ sudo apt-get update
+Hit:1 http://deb.debian.org/debian-security bookworm-security InRelease
+Get:2 https://download.docker.com/linux/debian bookworm InRelease [47.0 kB]
+Get:3 https://download.docker.com/linux/debian bookworm/stable amd64 Packages [45.3 kB]
+Hit:4 http://kartolo.sby.datautama.net.id/debian bookworm InRelease
+Hit:5 http://kartolo.sby.datautama.net.id/debian bookworm-updates InRelease
+Hit:6 http://kartolo.sby.datautama.net.id/debian bookworm-backports InRelease
+Fetched 92.3 kB in 9s (10.4 kB/s)
+Reading package lists... Done
+docker@server1:~$ sudo apt-get install docker-ce docker-ce-cli docker-buildx-plugin docker-compose-plugin
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  containerd.io docker-ce-rootless-extras git git-man iptables liberror-perl libip6tc2 libslirp0 patch pigz
+  slirp4netns
+Suggested packages:
+  cgroupfs-mount | cgroup-lite docker-model-plugin git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk
+  gitweb git-cvs git-mediawiki git-svn firewalld ed diffutils-doc
+The following NEW packages will be installed:
+  containerd.io docker-buildx-plugin docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin git
+  git-man iptables liberror-perl libip6tc2 libslirp0 patch pigz slirp4netns
+0 upgraded, 15 newly installed, 0 to remove and 268 not upgraded.
+Need to get 113 MB of archives.
+After this operation, 481 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 https://download.docker.com/linux/debian bookworm/stable amd64 containerd.io amd64 1.7.27-1 [30.5 MB]
+Get:2 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 libip6tc2 amd64 1.8.9-2 [19.4 kB]
+Get:3 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 iptables amd64 1.8.9-2 [360 kB]
+Get:4 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 pigz amd64 2.6-1 [64.0 kB]
+Get:5 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29.0 kB]
+Get:6 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u2 [2,053 kB]
+Ign:6 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u2
+Get:7 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 git amd64 1:2.39.5-0+deb12u2 [7,260 kB]
+Get:8 https://download.docker.com/linux/debian bookworm/stable amd64 docker-ce-cli amd64 5:28.3.3-1~debian.12~bookworm [16.5 MB]
+Get:9 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 libslirp0 amd64 4.7.0-1 [63.0 kB]
+Get:10 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 patch amd64 2.7.6-7 [128 kB]
+Get:11 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 slirp4netns amd64 1.2.0-1 [37.5 kB]
+Get:6 http://kartolo.sby.datautama.net.id/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u2 [2,053 kB]
+Get:12 https://download.docker.com/linux/debian bookworm/stable amd64 docker-ce amd64 5:28.3.3-1~debian.12~bookworm [19.6 MB]
+Get:13 https://download.docker.com/linux/debian bookworm/stable amd64 docker-buildx-plugin amd64 0.26.1-1~debian.12~bookworm [15.8 MB]
+Get:14 https://download.docker.com/linux/debian bookworm/stable amd64 docker-ce-rootless-extras amd64 5:28.3.3-1~debian.12~bookworm [6,477 kB]
+Get:15 https://download.docker.com/linux/debian bookworm/stable amd64 docker-compose-plugin amd64 2.39.1-1~debian.12~bookworm [14.2 MB]
+Fetched 113 MB in 1min 46s (1,068 kB/s)
+Selecting previously unselected package containerd.io.
+(Reading database ... 146702 files and directories currently installed.)
+Preparing to unpack .../00-containerd.io_1.7.27-1_amd64.deb ...
+Unpacking containerd.io (1.7.27-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../01-docker-ce-cli_5%3a28.3.3-1~debian.12~bookworm_amd64.deb ...
+Unpacking docker-ce-cli (5:28.3.3-1~debian.12~bookworm) ...
+Selecting previously unselected package libip6tc2:amd64.
+Preparing to unpack .../02-libip6tc2_1.8.9-2_amd64.deb ...
+Unpacking libip6tc2:amd64 (1.8.9-2) ...
+Selecting previously unselected package iptables.
+Preparing to unpack .../03-iptables_1.8.9-2_amd64.deb ...
+Unpacking iptables (1.8.9-2) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../04-docker-ce_5%3a28.3.3-1~debian.12~bookworm_amd64.deb ...
+Unpacking docker-ce (5:28.3.3-1~debian.12~bookworm) ...
+Selecting previously unselected package pigz.
+Preparing to unpack .../05-pigz_2.6-1_amd64.deb ...
+Unpacking pigz (2.6-1) ...
+Selecting previously unselected package docker-buildx-plugin.
+Preparing to unpack .../06-docker-buildx-plugin_0.26.1-1~debian.12~bookworm_amd64.deb ...
+Unpacking docker-buildx-plugin (0.26.1-1~debian.12~bookworm) ...
+Selecting previously unselected package docker-ce-rootless-extras.
+Preparing to unpack .../07-docker-ce-rootless-extras_5%3a28.3.3-1~debian.12~bookworm_amd64.deb ...
+Unpacking docker-ce-rootless-extras (5:28.3.3-1~debian.12~bookworm) ...
+Selecting previously unselected package docker-compose-plugin.
+Preparing to unpack .../08-docker-compose-plugin_2.39.1-1~debian.12~bookworm_amd64.deb ...
+Unpacking docker-compose-plugin (2.39.1-1~debian.12~bookworm) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../09-liberror-perl_0.17029-2_all.deb ...
+Unpacking liberror-perl (0.17029-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../10-git-man_1%3a2.39.5-0+deb12u2_all.deb ...
+Unpacking git-man (1:2.39.5-0+deb12u2) ...
+Selecting previously unselected package git.
+Preparing to unpack .../11-git_1%3a2.39.5-0+deb12u2_amd64.deb ...
+Unpacking git (1:2.39.5-0+deb12u2) ...
+Selecting previously unselected package libslirp0:amd64.
+Preparing to unpack .../12-libslirp0_4.7.0-1_amd64.deb ...
+Unpacking libslirp0:amd64 (4.7.0-1) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../13-patch_2.7.6-7_amd64.deb ...
+Unpacking patch (2.7.6-7) ...
+Selecting previously unselected package slirp4netns.
+Preparing to unpack .../14-slirp4netns_1.2.0-1_amd64.deb ...
+Unpacking slirp4netns (1.2.0-1) ...
+Setting up libip6tc2:amd64 (1.8.9-2) ...
+Setting up liberror-perl (0.17029-2) ...
+Setting up docker-buildx-plugin (0.26.1-1~debian.12~bookworm) ...
+Setting up containerd.io (1.7.27-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up patch (2.7.6-7) ...
+Setting up docker-compose-plugin (2.39.1-1~debian.12~bookworm) ...
+Setting up docker-ce-cli (5:28.3.3-1~debian.12~bookworm) ...
+Setting up libslirp0:amd64 (4.7.0-1) ...
+Setting up pigz (2.6-1) ...
+Setting up git-man (1:2.39.5-0+deb12u2) ...
+Setting up docker-ce-rootless-extras (5:28.3.3-1~debian.12~bookworm) ...
+Setting up slirp4netns (1.2.0-1) ...
+Setting up iptables (1.8.9-2) ...
+update-alternatives: using /usr/sbin/iptables-legacy to provide /usr/sbin/iptables (iptables) in auto mode
+update-alternatives: using /usr/sbin/ip6tables-legacy to provide /usr/sbin/ip6tables (ip6tables) in auto mode
+update-alternatives: using /usr/sbin/iptables-nft to provide /usr/sbin/iptables (iptables) in auto mode
+update-alternatives: using /usr/sbin/ip6tables-nft to provide /usr/sbin/ip6tables (ip6tables) in auto mode
+update-alternatives: using /usr/sbin/arptables-nft to provide /usr/sbin/arptables (arptables) in auto mode
+update-alternatives: using /usr/sbin/ebtables-nft to provide /usr/sbin/ebtables (ebtables) in auto mode
+Setting up docker-ce (5:28.3.3-1~debian.12~bookworm) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Setting up git (1:2.39.5-0+deb12u2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u7) ...
+docker@server1:~$ docker version
+Client: Docker Engine - Community
+ Version:           28.3.3
+ API version:       1.51
+ Go version:        go1.24.5
+ Git commit:        980b856
+ Built:             Fri Jul 25 11:34:00 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          28.3.3
+  API version:      1.51 (minimum version 1.24)
+  Go version:       go1.24.5
+  Git commit:       bea959c
+  Built:            Fri Jul 25 11:34:00 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.7.27
+  GitCommit:        05044ec0a9a75232cad458027ca83437aae3f4da
+ runc:
+  Version:          1.2.5
+  GitCommit:        v1.2.5-0-g59923ef
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+docker@server1:~$ client_loop: send disconnect: Connection reset
+
+C:\Users\Lenovo>ssh docker@192.168.8.98
+docker@192.168.8.98's password:
+Permission denied, please try again.
+docker@192.168.8.98's password:
+Linux server1 6.1.0-22-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.94-1 (2024-06-21) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Sep  1 05:27:42 2025 from 192.168.8.54
+docker@server1:~$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+docker@server1:~$ docker search php-apache8.2
+NAME      DESCRIPTION   STARS     OFFICIAL
+docker@server1:~$ docker search php-apache:8.2
+NAME                       DESCRIPTION                                     STARS     OFFICIAL
+ilios/php-apache           Base image for running Ilios in a container.    1
+treehouses/php-apache      Multiarchitecture php-apache image              0
+webdevops/php-apache       Apache with PHP-FPM (based on webdevops/php)    153
+wodby/php-apache           Generic Apache HTTP server for PHP-FPM          0
+radys/php-apache                                                           0
+talentify/php-apache       Images used for devlopment and CI at Talenti…   0
+phalconphp/php-apache                                                      14
+pjlewis/php-apache                                                         0
+previousnext/php-apache                                                    0
+cha01/php-apache                                                           0
+droptica/php-apache                                                        0
+geerlingguy/php-apache     PHP + Apache image built from the Ansible Ro…   7
+webhippie/php-apache       Docker image for PHP on Apache                  5
+credpago/php-apache        PHP with Apache HTTP Server                     0
+rshop/php-apache                                                           0
+lpasselin/php-apache                                                       0
+buluma/php-apache          PHP Apache Container (Built with Ansible)       1
+itworksdc/php-apache                                                       0
+redwebaps/php-apache                                                       0
+kaz29/php-apache                                                           0
+silarhi/php-apache         Another set of PHP + Apache Docker images. G…   1
+socialengine/php-apache    This is an image with PHP, Composer, Apache …   3
+humilit/php-apache                                                         0
+kartoffeltoby/php-apache                                                   0
+oberd/php-apache                                                           0
+docker@server1:~$ docker search php8.2
+NAME                        DESCRIPTION                                     STARS     OFFICIAL
+easyengine/php8.2                                                           0
+aidecompany/php8.2                                                          0
+rajin606/php8.2                                                             0
+scplatform/php8.2                                                           0
+davincistudio/php8.2                                                        0
+mixabledev/php8.2           PHP8.2-fpm + extensions                         0
+rafaelnica/php8.2                                                           0
+gersualves/php8.2                                                           0
+crediwiredev/php8.2                                                         0
+benylightflows/php8.2                                                       0
+dejwcake/php8.2                                                             0
+vicky3131/php8.2                                                            0
+grupocometa/php8.2                                                          0
+tjakie/php8.2                                                               0
+mesavolt/php8.2                                                             0
+robertlee0311/php8.2                                                        0
+rtbfindev/php8.2                                                            0
+greeniadevelopment/php8.2                                                   0
+devwealth/php8.2            This repository provides a pre-configured Do…   0
+rueduphp/php8.2                                                             0
+bain2018/php8.2                                                             0
+informaticsinc/php8.2                                                       0
+alefort2/php8.2                                                             0
+jksantos/php8.2                                                             0
+yoprogramo/php8.2           Images for PHP development / production         0
+docker@server1:~$ docker pull php-apache:8.2
+Error response from daemon: pull access denied for php-apache, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+docker@server1:~$ docker pull bitnami/apache:sha256-9c7cd5372d1cdf91d506cf93dfcb75e53902039110c87cb39eb9570c1d66d892
+sha256-9c7cd5372d1cdf91d506cf93dfcb75e53902039110c87cb39eb9570c1d66d892: Pulling from bitnami/apache
+unsupported media type application/vnd.cncf.notary.signature
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+docker@server1:~$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+docker@server1:~$ docker images ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+No images found matching "ls": did you mean "docker image ls"?
+docker@server1:~$ docker pull debian
+Using default tag: latest
+latest: Pulling from library/debian
+80b7316254b3: Pull complete
+Digest: sha256:6d87375016340817ac2391e670971725a9981cfc24e221c47734681ed0f6c0f5
+Status: Downloaded newer image for debian:latest
+docker.io/library/debian:latest
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+debian       latest    047bd8d81940   3 weeks ago   120MB
+docker@server1:~$ docker pull debian
+Using default tag: latest
+latest: Pulling from library/debian
+Digest: sha256:6d87375016340817ac2391e670971725a9981cfc24e221c47734681ed0f6c0f5
+Status: Image is up to date for debian:latest
+docker.io/library/debian:latest
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+debian       latest    047bd8d81940   3 weeks ago   120MB
+docker@server1:~$ docker run -itd --name muktos -h muktos -p 8000:80 debian:latest  /bin/bash
+e103c1f806834991ef5d0339c69bfae63af761b73444e7edb7d4683acd642736
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS          PORTS                                     NAMES
+e103c1f80683   debian:latest   "/bin/bash"   15 seconds ago   Up 14 seconds   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp   muktos
+docker@server1:~$ docker exec -it muktos /bin/bash
+root@muktos:/# apt-get update
+Get:1 http://deb.debian.org/debian trixie InRelease [138 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.1 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9668 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [2432 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [33.1 kB]
+Fetched 9931 kB in 6s (1801 kB/s)
+Reading package lists... Done
+root@muktos:/# apt-get install nano
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libgpm2 libncursesw6
+Suggested packages:
+  gpm hunspell
+The following NEW packages will be installed:
+  libgpm2 libncursesw6 nano
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 795 kB of archives.
+After this operation, 3382 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://deb.debian.org/debian trixie/main amd64 libncursesw6 amd64 6.5+20250216-2 [135 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 nano amd64 8.4-1 [645 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 libgpm2 amd64 1.20.7-11+b2 [14.4 kB]
+Fetched 795 kB in 0s (1853 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 3.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 3.)
+debconf: falling back to frontend: Teletype
+Selecting previously unselected package libncursesw6:amd64.
+(Reading database ... 4934 files and directories currently installed.)
+Preparing to unpack .../libncursesw6_6.5+20250216-2_amd64.deb ...
+Unpacking libncursesw6:amd64 (6.5+20250216-2) ...
+Selecting previously unselected package nano.
+Preparing to unpack .../archives/nano_8.4-1_amd64.deb ...
+Unpacking nano (8.4-1) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../libgpm2_1.20.7-11+b2_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.7-11+b2) ...
+Setting up libgpm2:amd64 (1.20.7-11+b2) ...
+Setting up libncursesw6:amd64 (6.5+20250216-2) ...
+Setting up nano (8.4-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+Processing triggers for libc-bin (2.41-12) ...
+root@muktos:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@muktos:/# nano test.sh
+root@muktos:/# root@muktos:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  test.sh  tmp  usr  var
+root@muktos:/# exit
+exit
+docker@server1:~$ docker stop muktos
+muktos
+docker@server1:~$ ipconfig
+-bash: ipconfig: command not found
+docker@server1:~$ ifconfig
+-bash: ifconfig: command not found
+docker@server1:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:50:56:31:0a:2c brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.8.98/24 brd 192.168.8.255 scope global dynamic noprefixroute ens33
+       valid_lft 23585sec preferred_lft 23585sec
+    inet6 fe80::250:56ff:fe31:a2c/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether c2:5e:18:cb:7d:d3 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::c05e:18ff:fecb:7dd3/64 scope link
+       valid_lft forever preferred_lft forever
+docker@server1:~$ docker restart muktos
+muktos
+docker@server1:~$ docker exec -it muktos
+docker: 'docker exec' requires at least 2 arguments
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+See 'docker exec --help' for more information
+docker@server1:~$ docker exec -it muktos /bin/bash
+root@muktos:/# apt-get install apache2
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  adduser apache2-bin apache2-data apache2-utils ca-certificates krb5-locales libapr1t64 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libaprutil1t64 libbrotli1 libcom-err2 libcurl4t64 libexpat1 libffi8 libgdbm-compat4t64 libgdbm6t64
+  libgnutls30t64 libgssapi-krb5-2 libidn2-0 libjansson4 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0
+  libldap-common libldap2 liblua5.4-0 libnghttp2-14 libnghttp3-9 libp11-kit0 libperl5.40 libproc2-0 libpsl5t64
+  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1t64 libtasn1-6 libunistring5 libxml2
+  linux-sysctl-defaults media-types netbase openssl perl perl-modules-5.40 procps psmisc publicsuffix ssl-cert
+Suggested packages:
+  liblocale-gettext-perl cron quota apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw www-browser
+  gdbm-l10n gnutls-bin krb5-doc krb5-user sensible-utils libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make libtap-harness-archive-perl
+The following NEW packages will be installed:
+  adduser apache2 apache2-bin apache2-data apache2-utils ca-certificates krb5-locales libapr1t64
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 libbrotli1 libcom-err2 libcurl4t64 libexpat1 libffi8
+  libgdbm-compat4t64 libgdbm6t64 libgnutls30t64 libgssapi-krb5-2 libidn2-0 libjansson4 libk5crypto3 libkeyutils1
+  libkrb5-3 libkrb5support0 libldap-common libldap2 liblua5.4-0 libnghttp2-14 libnghttp3-9 libp11-kit0 libperl5.40
+  libproc2-0 libpsl5t64 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1t64 libtasn1-6 libunistring5
+  libxml2 linux-sysctl-defaults media-types netbase openssl perl perl-modules-5.40 procps psmisc publicsuffix ssl-cert
+0 upgraded, 53 newly installed, 0 to remove and 0 not upgraded.
+Need to get 19.2 MB of archives.
+After this operation, 85.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://deb.debian.org/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6 [3019 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 libgdbm6t64 amd64 1.24-2 [75.2 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2 [50.3 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6 [4341 kB]
+Get:5 http://deb.debian.org/debian trixie/main amd64 perl amd64 5.40.1-6 [267 kB]
+Get:6 http://deb.debian.org/debian trixie/main amd64 libapr1t64 amd64 1.7.5-1 [104 kB]
+Get:7 http://deb.debian.org/debian trixie/main amd64 libexpat1 amd64 2.7.1-2 [108 kB]
+Get:8 http://deb.debian.org/debian trixie/main amd64 libaprutil1t64 amd64 1.6.3-3+b1 [89.4 kB]
+Get:9 http://deb.debian.org/debian trixie/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-3+b1 [14.2 kB]
+Get:10 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9 [19.8 kB]
+Get:11 http://deb.debian.org/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9 [57.5 kB]
+Get:12 http://deb.debian.org/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1 [194 kB]
+Get:13 http://deb.debian.org/debian trixie/main amd64 libaprutil1-ldap amd64 1.6.3-3+b1 [12.3 kB]
+Get:14 http://deb.debian.org/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+b7 [307 kB]
+Get:15 http://deb.debian.org/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5 [33.0 kB]
+Get:16 http://deb.debian.org/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b3 [25.0 kB]
+Get:17 http://deb.debian.org/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5 [81.5 kB]
+Get:18 http://deb.debian.org/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6 [9456 B]
+Get:19 http://deb.debian.org/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5 [326 kB]
+Get:20 http://deb.debian.org/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5 [138 kB]
+Get:21 http://deb.debian.org/debian trixie/main amd64 libunistring5 amd64 1.3-2 [477 kB]
+Get:22 http://deb.debian.org/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2 [109 kB]
+Get:23 http://deb.debian.org/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1 [76.0 kB]
+Get:24 http://deb.debian.org/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1 [67.7 kB]
+Get:25 http://deb.debian.org/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1 [57.2 kB]
+Get:26 http://deb.debian.org/debian trixie/main amd64 libffi8 amd64 3.4.8-2 [24.1 kB]
+Get:27 http://deb.debian.org/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3 [425 kB]
+Get:28 http://deb.debian.org/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2 [49.9 kB]
+Get:29 http://deb.debian.org/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3 [1465 kB]
+Get:30 http://deb.debian.org/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5 [58.8 kB]
+Get:31 http://deb.debian.org/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1 [245 kB]
+Get:32 http://deb.debian.org/debian trixie/main amd64 libcurl4t64 amd64 8.14.1-2 [391 kB]
+Get:33 http://deb.debian.org/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3 [39.8 kB]
+Get:34 http://deb.debian.org/debian trixie/main amd64 liblua5.4-0 amd64 5.4.7-1+b2 [147 kB]
+Get:35 http://deb.debian.org/debian-security trixie-security/main amd64 libxml2 amd64 2.12.7+dfsg+really2.9.14-2.1+deb13u1 [698 kB]
+Get:36 http://deb.debian.org/debian trixie/main amd64 apache2-bin amd64 2.4.65-2 [1405 kB]
+Get:37 http://deb.debian.org/debian trixie/main amd64 apache2-data all 2.4.65-2 [160 kB]
+Get:38 http://deb.debian.org/debian trixie/main amd64 apache2-utils amd64 2.4.65-2 [215 kB]
+Get:39 http://deb.debian.org/debian trixie/main amd64 media-types all 13.0.0 [29.3 kB]
+Get:40 http://deb.debian.org/debian trixie/main amd64 libproc2-0 amd64 2:4.0.4-9 [65.6 kB]
+Get:41 http://deb.debian.org/debian trixie/main amd64 procps amd64 2:4.0.4-9 [882 kB]
+Get:42 http://deb.debian.org/debian trixie/main amd64 apache2 amd64 2.4.65-2 [224 kB]
+Get:43 http://deb.debian.org/debian trixie/main amd64 adduser all 3.152 [191 kB]
+Get:44 http://deb.debian.org/debian trixie/main amd64 linux-sysctl-defaults all 4.12 [5624 B]
+Get:45 http://deb.debian.org/debian trixie/main amd64 netbase all 6.5 [12.4 kB]
+Get:46 http://deb.debian.org/debian trixie/main amd64 openssl amd64 3.5.1-1 [1494 kB]
+Get:47 http://deb.debian.org/debian trixie/main amd64 ca-certificates all 20250419 [162 kB]
+Get:48 http://deb.debian.org/debian trixie/main amd64 krb5-locales all 1.21.3-5 [101 kB]
+Get:49 http://deb.debian.org/debian trixie/main amd64 libldap-common all 2.6.10+dfsg-1 [35.1 kB]
+Get:50 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-9 [66.7 kB]
+Get:51 http://deb.debian.org/debian trixie/main amd64 psmisc amd64 23.7-2 [267 kB]
+Get:52 http://deb.debian.org/debian trixie/main amd64 publicsuffix all 20250328.1952-0.1 [296 kB]
+Get:53 http://deb.debian.org/debian trixie/main amd64 ssl-cert all 1.1.3 [16.8 kB]
+Fetched 19.2 MB in 9s (2148 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 53.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 53.)
+debconf: falling back to frontend: Teletype
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package perl-modules-5.40.
+(Reading database ... 5062 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.40_5.40.1-6_all.deb ...
+Unpacking perl-modules-5.40 (5.40.1-6) ...
+Selecting previously unselected package libgdbm6t64:amd64.
+Preparing to unpack .../01-libgdbm6t64_1.24-2_amd64.deb ...
+Unpacking libgdbm6t64:amd64 (1.24-2) ...
+Selecting previously unselected package libgdbm-compat4t64:amd64.
+Preparing to unpack .../02-libgdbm-compat4t64_1.24-2_amd64.deb ...
+Unpacking libgdbm-compat4t64:amd64 (1.24-2) ...
+Selecting previously unselected package libperl5.40:amd64.
+Preparing to unpack .../03-libperl5.40_5.40.1-6_amd64.deb ...
+Unpacking libperl5.40:amd64 (5.40.1-6) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.40.1-6_amd64.deb ...
+Unpacking perl (5.40.1-6) ...
+Selecting previously unselected package libapr1t64:amd64.
+Preparing to unpack .../05-libapr1t64_1.7.5-1_amd64.deb ...
+Unpacking libapr1t64:amd64 (1.7.5-1) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../06-libexpat1_2.7.1-2_amd64.deb ...
+Unpacking libexpat1:amd64 (2.7.1-2) ...
+Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../07-libaprutil1t64_1.6.3-3+b1_amd64.deb ...
+Unpacking libaprutil1t64:amd64 (1.6.3-3+b1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../08-libaprutil1-dbd-sqlite3_1.6.3-3+b1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-3+b1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../09-libsasl2-modules-db_2.1.28+dfsg1-9_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../10-libsasl2-2_2.1.28+dfsg1-9_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+Selecting previously unselected package libldap2:amd64.
+Preparing to unpack .../11-libldap2_2.6.10+dfsg-1_amd64.deb ...
+Unpacking libldap2:amd64 (2.6.10+dfsg-1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../12-libaprutil1-ldap_1.6.3-3+b1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.3-3+b1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../13-libbrotli1_1.1.0-2+b7_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2+b7) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../14-libkrb5support0_1.21.3-5_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.21.3-5) ...
+Selecting previously unselected package libcom-err2:amd64.
+Preparing to unpack .../15-libcom-err2_1.47.2-3+b3_amd64.deb ...
+Unpacking libcom-err2:amd64 (1.47.2-3+b3) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../16-libk5crypto3_1.21.3-5_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.21.3-5) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../17-libkeyutils1_1.6.3-6_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-6) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../18-libkrb5-3_1.21.3-5_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.21.3-5) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../19-libgssapi-krb5-2_1.21.3-5_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.21.3-5) ...
+Selecting previously unselected package libunistring5:amd64.
+Preparing to unpack .../20-libunistring5_1.3-2_amd64.deb ...
+Unpacking libunistring5:amd64 (1.3-2) ...
+Selecting previously unselected package libidn2-0:amd64.
+Preparing to unpack .../21-libidn2-0_2.3.8-2_amd64.deb ...
+Unpacking libidn2-0:amd64 (2.3.8-2) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../22-libnghttp2-14_1.64.0-1.1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.64.0-1.1) ...
+Selecting previously unselected package libnghttp3-9:amd64.
+Preparing to unpack .../23-libnghttp3-9_1.8.0-1_amd64.deb ...
+Unpacking libnghttp3-9:amd64 (1.8.0-1) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../24-libpsl5t64_0.21.2-1.1+b1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+Selecting previously unselected package libffi8:amd64.
+Preparing to unpack .../25-libffi8_3.4.8-2_amd64.deb ...
+Unpacking libffi8:amd64 (3.4.8-2) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../26-libp11-kit0_0.25.5-3_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.25.5-3) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../27-libtasn1-6_4.20.0-2_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.20.0-2) ...
+Selecting previously unselected package libgnutls30t64:amd64.
+Preparing to unpack .../28-libgnutls30t64_3.8.9-3_amd64.deb ...
+Unpacking libgnutls30t64:amd64 (3.8.9-3) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../29-librtmp1_2.4+20151223.gitfa8646d.1-2+b5_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+Selecting previously unselected package libssh2-1t64:amd64.
+Preparing to unpack .../30-libssh2-1t64_1.11.1-1_amd64.deb ...
+Unpacking libssh2-1t64:amd64 (1.11.1-1) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../31-libcurl4t64_8.14.1-2_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.14.1-2) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../32-libjansson4_2.14-2+b3_amd64.deb ...
+Unpacking libjansson4:amd64 (2.14-2+b3) ...
+Selecting previously unselected package liblua5.4-0:amd64.
+Preparing to unpack .../33-liblua5.4-0_5.4.7-1+b2_amd64.deb ...
+Unpacking liblua5.4-0:amd64 (5.4.7-1+b2) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../34-libxml2_2.12.7+dfsg+really2.9.14-2.1+deb13u1_amd64.deb ...
+Unpacking libxml2:amd64 (2.12.7+dfsg+really2.9.14-2.1+deb13u1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../35-apache2-bin_2.4.65-2_amd64.deb ...
+Unpacking apache2-bin (2.4.65-2) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../36-apache2-data_2.4.65-2_all.deb ...
+Unpacking apache2-data (2.4.65-2) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../37-apache2-utils_2.4.65-2_amd64.deb ...
+Unpacking apache2-utils (2.4.65-2) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../38-media-types_13.0.0_all.deb ...
+Unpacking media-types (13.0.0) ...
+Selecting previously unselected package libproc2-0:amd64.
+Preparing to unpack .../39-libproc2-0_2%3a4.0.4-9_amd64.deb ...
+Unpacking libproc2-0:amd64 (2:4.0.4-9) ...
+Selecting previously unselected package procps.
+Preparing to unpack .../40-procps_2%3a4.0.4-9_amd64.deb ...
+Unpacking procps (2:4.0.4-9) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../41-apache2_2.4.65-2_amd64.deb ...
+Unpacking apache2 (2.4.65-2) ...
+Selecting previously unselected package adduser.
+Preparing to unpack .../42-adduser_3.152_all.deb ...
+Unpacking adduser (3.152) ...
+Setting up adduser (3.152) ...
+Selecting previously unselected package linux-sysctl-defaults.
+(Reading database ... 8477 files and directories currently installed.)
+Preparing to unpack .../0-linux-sysctl-defaults_4.12_all.deb ...
+Unpacking linux-sysctl-defaults (4.12) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../1-netbase_6.5_all.deb ...
+Unpacking netbase (6.5) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../2-openssl_3.5.1-1_amd64.deb ...
+Unpacking openssl (3.5.1-1) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../3-ca-certificates_20250419_all.deb ...
+Unpacking ca-certificates (20250419) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../4-krb5-locales_1.21.3-5_all.deb ...
+Unpacking krb5-locales (1.21.3-5) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../5-libldap-common_2.6.10+dfsg-1_all.deb ...
+Unpacking libldap-common (2.6.10+dfsg-1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../6-libsasl2-modules_2.1.28+dfsg1-9_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-9) ...
+Selecting previously unselected package psmisc.
+Preparing to unpack .../7-psmisc_23.7-2_amd64.deb ...
+Unpacking psmisc (23.7-2) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../8-publicsuffix_20250328.1952-0.1_all.deb ...
+Unpacking publicsuffix (20250328.1952-0.1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../9-ssl-cert_1.1.3_all.deb ...
+Unpacking ssl-cert (1.1.3) ...
+Setting up libexpat1:amd64 (2.7.1-2) ...
+Setting up media-types (13.0.0) ...
+Setting up libkeyutils1:amd64 (1.6.3-6) ...
+Setting up libgdbm6t64:amd64 (1.24-2) ...
+Setting up libgdbm-compat4t64:amd64 (1.24-2) ...
+Setting up psmisc (23.7-2) ...
+Setting up libbrotli1:amd64 (1.1.0-2+b7) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-9) ...
+Setting up libnghttp2-14:amd64 (1.64.0-1.1) ...
+Setting up krb5-locales (1.21.3-5) ...
+Setting up libcom-err2:amd64 (1.47.2-3+b3) ...
+Setting up libldap-common (2.6.10+dfsg-1) ...
+Setting up libjansson4:amd64 (2.14-2+b3) ...
+Setting up libkrb5support0:amd64 (1.21.3-5) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+Setting up linux-sysctl-defaults (4.12) ...
+Setting up libproc2-0:amd64 (2:4.0.4-9) ...
+Setting up libunistring5:amd64 (1.3-2) ...
+Setting up libk5crypto3:amd64 (1.21.3-5) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+Setting up libnghttp3-9:amd64 (1.8.0-1) ...
+Setting up libffi8:amd64 (3.4.8-2) ...
+Setting up perl-modules-5.40 (5.40.1-6) ...
+Setting up procps (2:4.0.4-9) ...
+Setting up libapr1t64:amd64 (1.7.5-1) ...
+Setting up libtasn1-6:amd64 (4.20.0-2) ...
+Setting up liblua5.4-0:amd64 (5.4.7-1+b2) ...
+Setting up netbase (6.5) ...
+Setting up libkrb5-3:amd64 (1.21.3-5) ...
+Setting up apache2-data (2.4.65-2) ...
+Setting up libssh2-1t64:amd64 (1.11.1-1) ...
+Setting up openssl (3.5.1-1) ...
+Setting up publicsuffix (20250328.1952-0.1) ...
+Setting up libxml2:amd64 (2.12.7+dfsg+really2.9.14-2.1+deb13u1) ...
+Setting up libldap2:amd64 (2.6.10+dfsg-1) ...
+Setting up libaprutil1t64:amd64 (1.6.3-3+b1) ...
+Setting up libidn2-0:amd64 (2.3.8-2) ...
+Setting up libaprutil1-ldap:amd64 (1.6.3-3+b1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-3+b1) ...
+Setting up libperl5.40:amd64 (5.40.1-6) ...
+Setting up ca-certificates (20250419) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Updating certificates in /etc/ssl/certs...
+150 added, 0 removed; done.
+Setting up perl (5.40.1-6) ...
+Setting up ssl-cert (1.1.3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Setting up libp11-kit0:amd64 (0.25.5-3) ...
+Setting up libgssapi-krb5-2:amd64 (1.21.3-5) ...
+Setting up apache2-utils (2.4.65-2) ...
+Setting up libgnutls30t64:amd64 (3.8.9-3) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+Setting up libcurl4t64:amd64 (8.14.1-2) ...
+Setting up apache2-bin (2.4.65-2) ...
+Setting up apache2 (2.4.65-2) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for libc-bin (2.41-12) ...
+Processing triggers for ca-certificates (20250419) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+root@muktos:/# systemctl start apache2
+bash: systemctl: command not found
+root@muktos:/# /etc/init.d/apache
+apache-htcacheclean  apache2
+root@muktos:/# /etc/init.d/apache2 start
+Starting Apache httpd web server: apache2AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+.
+root@muktos:/# /etc/init.d/apache2 enable
+Usage: apache2 {start|stop|graceful-stop|restart|reload|force-reload}
+root@muktos:/# exit
+exit
+docker@server1:~$ docker ps -a
+CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS         PORTS                                     NAMES
+e103c1f80683   debian:latest   "/bin/bash"   12 minutes ago   Up 4 minutes   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp   muktos
+docker@server1:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:50:56:31:0a:2c brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.8.98/24 brd 192.168.8.255 scope global dynamic noprefixroute ens33
+       valid_lft 23252sec preferred_lft 23252sec
+    inet6 fe80::250:56ff:fe31:a2c/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether c2:5e:18:cb:7d:d3 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::c05e:18ff:fecb:7dd3/64 scope link
+       valid_lft forever preferred_lft forever
+6: veth3d60d0c@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
+    link/ether e2:3e:92:57:43:1c brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::e03e:92ff:fe57:431c/64 scope link
+       valid_lft forever preferred_lft forever
+docker@server1:~$ docker stop muktos
+muktos
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+debian       latest    047bd8d81940   3 weeks ago   120MB
+docker@server1:~$ docker rm muktos
+muktos
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+docker@server1:~$ docker run -itd --name muktos -h muktos -p 8000:80 debian:latest  /bin/bash
+36f62dd0b9a042ac7d7b2d42c6c2d81b3761ae566f5057e20c49b3a766ed53c5
+docker@server1:~$ docker exec -it muktos /bin/bash
+root@muktos:/# apt-get update
+Get:1 http://deb.debian.org/debian trixie InRelease [138 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.1 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9668 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [2432 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [33.1 kB]
+Fetched 9931 kB in 10s (1008 kB/s)
+Reading package lists... Done
+root@muktos:/# apt-get install apache2 -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  adduser apache2-bin apache2-data apache2-utils ca-certificates krb5-locales libapr1t64 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libaprutil1t64 libbrotli1 libcom-err2 libcurl4t64 libexpat1 libffi8 libgdbm-compat4t64 libgdbm6t64
+  libgnutls30t64 libgpm2 libgssapi-krb5-2 libidn2-0 libjansson4 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0
+  libldap-common libldap2 liblua5.4-0 libncursesw6 libnghttp2-14 libnghttp3-9 libp11-kit0 libperl5.40 libproc2-0
+  libpsl5t64 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1t64 libtasn1-6 libunistring5 libxml2
+  linux-sysctl-defaults media-types netbase openssl perl perl-modules-5.40 procps psmisc publicsuffix ssl-cert
+Suggested packages:
+  liblocale-gettext-perl cron quota apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw www-browser
+  gdbm-l10n gnutls-bin gpm krb5-doc krb5-user sensible-utils libsasl2-modules-gssapi-mit
+  | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make libtap-harness-archive-perl
+The following NEW packages will be installed:
+  adduser apache2 apache2-bin apache2-data apache2-utils ca-certificates krb5-locales libapr1t64
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 libbrotli1 libcom-err2 libcurl4t64 libexpat1 libffi8
+  libgdbm-compat4t64 libgdbm6t64 libgnutls30t64 libgpm2 libgssapi-krb5-2 libidn2-0 libjansson4 libk5crypto3
+  libkeyutils1 libkrb5-3 libkrb5support0 libldap-common libldap2 liblua5.4-0 libncursesw6 libnghttp2-14 libnghttp3-9
+  libp11-kit0 libperl5.40 libproc2-0 libpsl5t64 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1t64
+  libtasn1-6 libunistring5 libxml2 linux-sysctl-defaults media-types netbase openssl perl perl-modules-5.40 procps
+  psmisc publicsuffix ssl-cert
+0 upgraded, 55 newly installed, 0 to remove and 0 not upgraded.
+Need to get 19.4 MB of archives.
+After this operation, 86.1 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6 [3019 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 libgdbm6t64 amd64 1.24-2 [75.2 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2 [50.3 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6 [4341 kB]
+Get:5 http://deb.debian.org/debian trixie/main amd64 perl amd64 5.40.1-6 [267 kB]
+Get:6 http://deb.debian.org/debian trixie/main amd64 libapr1t64 amd64 1.7.5-1 [104 kB]
+Get:7 http://deb.debian.org/debian trixie/main amd64 libexpat1 amd64 2.7.1-2 [108 kB]
+Get:8 http://deb.debian.org/debian trixie/main amd64 libaprutil1t64 amd64 1.6.3-3+b1 [89.4 kB]
+Get:9 http://deb.debian.org/debian trixie/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-3+b1 [14.2 kB]
+Get:10 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9 [19.8 kB]
+Get:11 http://deb.debian.org/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9 [57.5 kB]
+Get:12 http://deb.debian.org/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1 [194 kB]
+Get:13 http://deb.debian.org/debian trixie/main amd64 libaprutil1-ldap amd64 1.6.3-3+b1 [12.3 kB]
+Get:14 http://deb.debian.org/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+b7 [307 kB]
+Get:15 http://deb.debian.org/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5 [33.0 kB]
+Get:16 http://deb.debian.org/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b3 [25.0 kB]
+Get:17 http://deb.debian.org/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5 [81.5 kB]
+Get:18 http://deb.debian.org/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6 [9456 B]
+Get:19 http://deb.debian.org/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5 [326 kB]
+Get:20 http://deb.debian.org/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5 [138 kB]
+Get:21 http://deb.debian.org/debian trixie/main amd64 libunistring5 amd64 1.3-2 [477 kB]
+Get:22 http://deb.debian.org/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2 [109 kB]
+Get:23 http://deb.debian.org/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1 [76.0 kB]
+Get:24 http://deb.debian.org/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1 [67.7 kB]
+Get:25 http://deb.debian.org/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1 [57.2 kB]
+Get:26 http://deb.debian.org/debian trixie/main amd64 libffi8 amd64 3.4.8-2 [24.1 kB]
+Get:27 http://deb.debian.org/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3 [425 kB]
+Get:28 http://deb.debian.org/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2 [49.9 kB]
+Get:29 http://deb.debian.org/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3 [1465 kB]
+Get:30 http://deb.debian.org/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5 [58.8 kB]
+Get:31 http://deb.debian.org/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1 [245 kB]
+Get:32 http://deb.debian.org/debian trixie/main amd64 libcurl4t64 amd64 8.14.1-2 [391 kB]
+Get:33 http://deb.debian.org/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3 [39.8 kB]
+Get:34 http://deb.debian.org/debian trixie/main amd64 liblua5.4-0 amd64 5.4.7-1+b2 [147 kB]
+Get:35 http://deb.debian.org/debian-security trixie-security/main amd64 libxml2 amd64 2.12.7+dfsg+really2.9.14-2.1+deb13u1 [698 kB]
+Get:36 http://deb.debian.org/debian trixie/main amd64 apache2-bin amd64 2.4.65-2 [1405 kB]
+Get:37 http://deb.debian.org/debian trixie/main amd64 apache2-data all 2.4.65-2 [160 kB]
+Get:38 http://deb.debian.org/debian trixie/main amd64 apache2-utils amd64 2.4.65-2 [215 kB]
+Get:39 http://deb.debian.org/debian trixie/main amd64 media-types all 13.0.0 [29.3 kB]
+Get:40 http://deb.debian.org/debian trixie/main amd64 libncursesw6 amd64 6.5+20250216-2 [135 kB]
+Get:41 http://deb.debian.org/debian trixie/main amd64 libproc2-0 amd64 2:4.0.4-9 [65.6 kB]
+Get:42 http://deb.debian.org/debian trixie/main amd64 procps amd64 2:4.0.4-9 [882 kB]
+Get:43 http://deb.debian.org/debian trixie/main amd64 apache2 amd64 2.4.65-2 [224 kB]
+Get:44 http://deb.debian.org/debian trixie/main amd64 adduser all 3.152 [191 kB]
+Get:45 http://deb.debian.org/debian trixie/main amd64 linux-sysctl-defaults all 4.12 [5624 B]
+Get:46 http://deb.debian.org/debian trixie/main amd64 netbase all 6.5 [12.4 kB]
+Get:47 http://deb.debian.org/debian trixie/main amd64 openssl amd64 3.5.1-1 [1494 kB]
+Get:48 http://deb.debian.org/debian trixie/main amd64 ca-certificates all 20250419 [162 kB]
+Get:49 http://deb.debian.org/debian trixie/main amd64 krb5-locales all 1.21.3-5 [101 kB]
+Get:50 http://deb.debian.org/debian trixie/main amd64 libgpm2 amd64 1.20.7-11+b2 [14.4 kB]
+Get:51 http://deb.debian.org/debian trixie/main amd64 libldap-common all 2.6.10+dfsg-1 [35.1 kB]
+Get:52 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-9 [66.7 kB]
+Get:53 http://deb.debian.org/debian trixie/main amd64 psmisc amd64 23.7-2 [267 kB]
+Get:54 http://deb.debian.org/debian trixie/main amd64 publicsuffix all 20250328.1952-0.1 [296 kB]
+Get:55 http://deb.debian.org/debian trixie/main amd64 ssl-cert all 1.1.3 [16.8 kB]
+Fetched 19.4 MB in 9s (2047 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 55.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 55.)
+debconf: falling back to frontend: Teletype
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package perl-modules-5.40.
+(Reading database ... 4934 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.40_5.40.1-6_all.deb ...
+Unpacking perl-modules-5.40 (5.40.1-6) ...
+Selecting previously unselected package libgdbm6t64:amd64.
+Preparing to unpack .../01-libgdbm6t64_1.24-2_amd64.deb ...
+Unpacking libgdbm6t64:amd64 (1.24-2) ...
+Selecting previously unselected package libgdbm-compat4t64:amd64.
+Preparing to unpack .../02-libgdbm-compat4t64_1.24-2_amd64.deb ...
+Unpacking libgdbm-compat4t64:amd64 (1.24-2) ...
+Selecting previously unselected package libperl5.40:amd64.
+Preparing to unpack .../03-libperl5.40_5.40.1-6_amd64.deb ...
+Unpacking libperl5.40:amd64 (5.40.1-6) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.40.1-6_amd64.deb ...
+Unpacking perl (5.40.1-6) ...
+Selecting previously unselected package libapr1t64:amd64.
+Preparing to unpack .../05-libapr1t64_1.7.5-1_amd64.deb ...
+Unpacking libapr1t64:amd64 (1.7.5-1) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../06-libexpat1_2.7.1-2_amd64.deb ...
+Unpacking libexpat1:amd64 (2.7.1-2) ...
+Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../07-libaprutil1t64_1.6.3-3+b1_amd64.deb ...
+Unpacking libaprutil1t64:amd64 (1.6.3-3+b1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../08-libaprutil1-dbd-sqlite3_1.6.3-3+b1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-3+b1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../09-libsasl2-modules-db_2.1.28+dfsg1-9_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../10-libsasl2-2_2.1.28+dfsg1-9_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+Selecting previously unselected package libldap2:amd64.
+Preparing to unpack .../11-libldap2_2.6.10+dfsg-1_amd64.deb ...
+Unpacking libldap2:amd64 (2.6.10+dfsg-1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../12-libaprutil1-ldap_1.6.3-3+b1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.3-3+b1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../13-libbrotli1_1.1.0-2+b7_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2+b7) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../14-libkrb5support0_1.21.3-5_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.21.3-5) ...
+Selecting previously unselected package libcom-err2:amd64.
+Preparing to unpack .../15-libcom-err2_1.47.2-3+b3_amd64.deb ...
+Unpacking libcom-err2:amd64 (1.47.2-3+b3) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../16-libk5crypto3_1.21.3-5_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.21.3-5) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../17-libkeyutils1_1.6.3-6_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-6) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../18-libkrb5-3_1.21.3-5_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.21.3-5) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../19-libgssapi-krb5-2_1.21.3-5_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.21.3-5) ...
+Selecting previously unselected package libunistring5:amd64.
+Preparing to unpack .../20-libunistring5_1.3-2_amd64.deb ...
+Unpacking libunistring5:amd64 (1.3-2) ...
+Selecting previously unselected package libidn2-0:amd64.
+Preparing to unpack .../21-libidn2-0_2.3.8-2_amd64.deb ...
+Unpacking libidn2-0:amd64 (2.3.8-2) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../22-libnghttp2-14_1.64.0-1.1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.64.0-1.1) ...
+Selecting previously unselected package libnghttp3-9:amd64.
+Preparing to unpack .../23-libnghttp3-9_1.8.0-1_amd64.deb ...
+Unpacking libnghttp3-9:amd64 (1.8.0-1) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../24-libpsl5t64_0.21.2-1.1+b1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+Selecting previously unselected package libffi8:amd64.
+Preparing to unpack .../25-libffi8_3.4.8-2_amd64.deb ...
+Unpacking libffi8:amd64 (3.4.8-2) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../26-libp11-kit0_0.25.5-3_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.25.5-3) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../27-libtasn1-6_4.20.0-2_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.20.0-2) ...
+Selecting previously unselected package libgnutls30t64:amd64.
+Preparing to unpack .../28-libgnutls30t64_3.8.9-3_amd64.deb ...
+Unpacking libgnutls30t64:amd64 (3.8.9-3) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../29-librtmp1_2.4+20151223.gitfa8646d.1-2+b5_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+Selecting previously unselected package libssh2-1t64:amd64.
+Preparing to unpack .../30-libssh2-1t64_1.11.1-1_amd64.deb ...
+Unpacking libssh2-1t64:amd64 (1.11.1-1) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../31-libcurl4t64_8.14.1-2_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.14.1-2) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../32-libjansson4_2.14-2+b3_amd64.deb ...
+Unpacking libjansson4:amd64 (2.14-2+b3) ...
+Selecting previously unselected package liblua5.4-0:amd64.
+Preparing to unpack .../33-liblua5.4-0_5.4.7-1+b2_amd64.deb ...
+Unpacking liblua5.4-0:amd64 (5.4.7-1+b2) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../34-libxml2_2.12.7+dfsg+really2.9.14-2.1+deb13u1_amd64.deb ...
+Unpacking libxml2:amd64 (2.12.7+dfsg+really2.9.14-2.1+deb13u1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../35-apache2-bin_2.4.65-2_amd64.deb ...
+Unpacking apache2-bin (2.4.65-2) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../36-apache2-data_2.4.65-2_all.deb ...
+Unpacking apache2-data (2.4.65-2) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../37-apache2-utils_2.4.65-2_amd64.deb ...
+Unpacking apache2-utils (2.4.65-2) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../38-media-types_13.0.0_all.deb ...
+Unpacking media-types (13.0.0) ...
+Selecting previously unselected package libncursesw6:amd64.
+Preparing to unpack .../39-libncursesw6_6.5+20250216-2_amd64.deb ...
+Unpacking libncursesw6:amd64 (6.5+20250216-2) ...
+Selecting previously unselected package libproc2-0:amd64.
+Preparing to unpack .../40-libproc2-0_2%3a4.0.4-9_amd64.deb ...
+Unpacking libproc2-0:amd64 (2:4.0.4-9) ...
+Selecting previously unselected package procps.
+Preparing to unpack .../41-procps_2%3a4.0.4-9_amd64.deb ...
+Unpacking procps (2:4.0.4-9) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../42-apache2_2.4.65-2_amd64.deb ...
+Unpacking apache2 (2.4.65-2) ...
+Selecting previously unselected package adduser.
+Preparing to unpack .../43-adduser_3.152_all.deb ...
+Unpacking adduser (3.152) ...
+Setting up adduser (3.152) ...
+Selecting previously unselected package linux-sysctl-defaults.
+(Reading database ... 8358 files and directories currently installed.)
+Preparing to unpack .../00-linux-sysctl-defaults_4.12_all.deb ...
+Unpacking linux-sysctl-defaults (4.12) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../01-netbase_6.5_all.deb ...
+Unpacking netbase (6.5) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../02-openssl_3.5.1-1_amd64.deb ...
+Unpacking openssl (3.5.1-1) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../03-ca-certificates_20250419_all.deb ...
+Unpacking ca-certificates (20250419) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../04-krb5-locales_1.21.3-5_all.deb ...
+Unpacking krb5-locales (1.21.3-5) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../05-libgpm2_1.20.7-11+b2_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.7-11+b2) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../06-libldap-common_2.6.10+dfsg-1_all.deb ...
+Unpacking libldap-common (2.6.10+dfsg-1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../07-libsasl2-modules_2.1.28+dfsg1-9_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-9) ...
+Selecting previously unselected package psmisc.
+Preparing to unpack .../08-psmisc_23.7-2_amd64.deb ...
+Unpacking psmisc (23.7-2) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../09-publicsuffix_20250328.1952-0.1_all.deb ...
+Unpacking publicsuffix (20250328.1952-0.1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../10-ssl-cert_1.1.3_all.deb ...
+Unpacking ssl-cert (1.1.3) ...
+Setting up libexpat1:amd64 (2.7.1-2) ...
+Setting up media-types (13.0.0) ...
+Setting up libkeyutils1:amd64 (1.6.3-6) ...
+Setting up libgpm2:amd64 (1.20.7-11+b2) ...
+Setting up libgdbm6t64:amd64 (1.24-2) ...
+Setting up libgdbm-compat4t64:amd64 (1.24-2) ...
+Setting up psmisc (23.7-2) ...
+Setting up libbrotli1:amd64 (1.1.0-2+b7) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-9) ...
+Setting up libnghttp2-14:amd64 (1.64.0-1.1) ...
+Setting up krb5-locales (1.21.3-5) ...
+Setting up libcom-err2:amd64 (1.47.2-3+b3) ...
+Setting up libldap-common (2.6.10+dfsg-1) ...
+Setting up libjansson4:amd64 (2.14-2+b3) ...
+Setting up libkrb5support0:amd64 (1.21.3-5) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+Setting up linux-sysctl-defaults (4.12) ...
+Setting up libproc2-0:amd64 (2:4.0.4-9) ...
+Setting up libunistring5:amd64 (1.3-2) ...
+Setting up libncursesw6:amd64 (6.5+20250216-2) ...
+Setting up libk5crypto3:amd64 (1.21.3-5) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+Setting up libnghttp3-9:amd64 (1.8.0-1) ...
+Setting up libffi8:amd64 (3.4.8-2) ...
+Setting up perl-modules-5.40 (5.40.1-6) ...
+Setting up procps (2:4.0.4-9) ...
+Setting up libapr1t64:amd64 (1.7.5-1) ...
+Setting up libtasn1-6:amd64 (4.20.0-2) ...
+Setting up liblua5.4-0:amd64 (5.4.7-1+b2) ...
+Setting up netbase (6.5) ...
+Setting up libkrb5-3:amd64 (1.21.3-5) ...
+Setting up apache2-data (2.4.65-2) ...
+Setting up libssh2-1t64:amd64 (1.11.1-1) ...
+Setting up openssl (3.5.1-1) ...
+Setting up publicsuffix (20250328.1952-0.1) ...
+Setting up libxml2:amd64 (2.12.7+dfsg+really2.9.14-2.1+deb13u1) ...
+Setting up libldap2:amd64 (2.6.10+dfsg-1) ...
+Setting up libaprutil1t64:amd64 (1.6.3-3+b1) ...
+Setting up libidn2-0:amd64 (2.3.8-2) ...
+Setting up libaprutil1-ldap:amd64 (1.6.3-3+b1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-3+b1) ...
+Setting up libperl5.40:amd64 (5.40.1-6) ...
+Setting up ca-certificates (20250419) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Updating certificates in /etc/ssl/certs...
+150 added, 0 removed; done.
+Setting up perl (5.40.1-6) ...
+Setting up ssl-cert (1.1.3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Setting up libp11-kit0:amd64 (0.25.5-3) ...
+Setting up libgssapi-krb5-2:amd64 (1.21.3-5) ...
+Setting up apache2-utils (2.4.65-2) ...
+Setting up libgnutls30t64:amd64 (3.8.9-3) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+Setting up libcurl4t64:amd64 (8.14.1-2) ...
+Setting up apache2-bin (2.4.65-2) ...
+Setting up apache2 (2.4.65-2) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for libc-bin (2.41-12) ...
+Processing triggers for ca-certificates (20250419) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+root@muktos:/# /etc/init.d/apache2 start
+Starting Apache httpd web server: apache2AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+.
+root@muktos:/# exit
+exit
+docker@server1:~$ docker ps -a
+CONTAINER ID   IMAGE           COMMAND       CREATED              STATUS              PORTS                                     NAMES
+36f62dd0b9a0   debian:latest   "/bin/bash"   About a minute ago   Up About a minute   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp   muktos
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE           COMMAND       CREATED              STATUS              PORTS                                     NAMES
+36f62dd0b9a0   debian:latest   "/bin/bash"   About a minute ago   Up About a minute   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp   muktos
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+debian       latest    047bd8d81940   3 weeks ago   120MB
+docker@server1:~$ docker commit muktos webmuktos
+sha256:d4f87025e2883d4b105d8880be62697110b772b9be889296010171645bd675bc
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+webmuktos    latest    d4f87025e288   7 seconds ago   226MB
+debian       latest    047bd8d81940   3 weeks ago     120MB
+docker@server1:~$
+docker@server1:~$ docker pull mariadb
+Using default tag: latest
+latest: Pulling from library/mariadb
+76249c7cd503: Pull complete
+2d8cff3e3cb6: Pull complete
+4f6fbbc50826: Pull complete
+b9fecd364e7a: Pull complete
+420bcadcb59f: Pull complete
+cdac09aaab61: Pull complete
+ef6def1cca19: Pull complete
+5eb5ed4a1ef8: Pull complete
+Digest: sha256:cf73d31f704f907cf9300b8fe6ef686cdfd42c14aae2a0a21e82938c9c6c3f05
+Status: Downloaded newer image for mariadb:latest
+docker.io/library/mariadb:latest
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+webmuktos    latest    d4f87025e288   9 minutes ago   226MB
+debian       latest    047bd8d81940   3 weeks ago     120MB
+mariadb      latest    b443cc897ca5   3 weeks ago     330MB
+docker@server1:~$ ls
+docker@server1:~$ pwd
+/home/docker
+docker@server1:~$ mkdir apps
+docker@server1:~$ mkdir -p apps/app apps/db
+docker@server1:~$ ls -al apps/
+total 16
+drwxr-xr-x 4 docker docker 4096 Sep  1 23:17 .
+drwx------ 6 docker docker 4096 Sep  1 23:17 ..
+drwxr-xr-x 2 docker docker 4096 Sep  1 23:17 app
+drwxr-xr-x 2 docker docker 4096 Sep  1 23:17 db
+docker@server1:~$ docker run -itd --name mydb -h mydb -p 3306:3306 -v /home/docker/apps/db:/var/lib/mysql -e MARIADB_DATABASE=myapp -e MARIADB_USER=myappuser -e MARIADB_PASSWORD=abc -e MARIADB_ROOT_PASSWORD=abc mariadb
+bbc1043a82294ec820b6e7a0fd49a00ac6655845959726a88b23325b7329cc50
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+webmuktos    latest    d4f87025e288   13 minutes ago   226MB
+debian       latest    047bd8d81940   3 weeks ago      120MB
+mariadb      latest    b443cc897ca5   3 weeks ago      330MB
+docker@server1:~$ docker ps -a
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   10 seconds ago   Up 10 seconds   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              16 minutes ago   Up 16 minutes   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ docker run -itd --name myapp -h myapp -p 8080:80 -v /home/docker/apps/app:/var/www/html --link mydb webmuktos:latest
+2c20875d22506a5fe48d947d818b2b2f99e6cd6c2eea7464c16755b959db9551
+docker@server1:~$ docker ps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS              PORTS                                         NAMES
+2c20875d2250   webmuktos:latest   "/bin/bash"              4 seconds ago        Up 4 seconds        0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       myapp
+bbc1043a8229   mariadb            "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest      "/bin/bash"              17 minutes ago       Up 17 minutes       0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ docker exec -it muktos /bin/bash
+root@muktos:/# /etc/init.d/apache2 restart
+Restarting Apache httpd web server: apache2AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+.
+root@muktos:/# exit
+exit
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE              COMMAND                  CREATED              STATUS              PORTS                                         NAMES
+2c20875d2250   webmuktos:latest   "/bin/bash"              About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       myapp
+bbc1043a8229   mariadb            "docker-entrypoint.s…"   2 minutes ago        Up 2 minutes        0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest      "/bin/bash"              18 minutes ago       Up 18 minutes       0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+
+docker@server1:~$ ls
+apps  templatemo_595_3d_coverflow.zip
+docker@server1:~$ cd apps/
+docker@server1:~/apps$ ls
+app  db
+docker@server1:~/apps$ nano app/index.php
+docker@server1:~/apps$ pwd
+/home/docker/apps
+docker@server1:~/apps$ ls -al
+total 16
+drwxr-xr-x 4 docker docker          4096 Sep  1 23:17 .
+drwx------ 6 docker docker          4096 Sep  1 23:33 ..
+drwxr-xr-x 2 docker docker          4096 Sep  1 23:35 app
+drwxr-xr-x 6    999 systemd-journal 4096 Sep  1 23:19 db
+docker@server1:~/apps$ cd app/
+docker@server1:~/apps/app$ ls
+index.php
+docker@server1:~/apps/app$ cp /home/docker/templatemo_595_3d_coverflow.zip /home/docker/apps/app/
+docker@server1:~/apps/app$ ls
+index.php  templatemo_595_3d_coverflow.zip
+docker@server1:~/apps/app$ unzip templatemo_595_3d_coverflow.zip
+Archive:  templatemo_595_3d_coverflow.zip
+   creating: templatemo_595_3d_coverflow/
+   creating: templatemo_595_3d_coverflow/images/
+  inflating: templatemo_595_3d_coverflow/images/cascading-waterfall.jpg
+  inflating: templatemo_595_3d_coverflow/images/forest-path.jpg
+  inflating: templatemo_595_3d_coverflow/images/mountain-landscape.jpg
+  inflating: templatemo_595_3d_coverflow/images/ocean-sunset-golden-hour.jpg
+  inflating: templatemo_595_3d_coverflow/images/rolling-sand-dunes.jpg
+  inflating: templatemo_595_3d_coverflow/images/serene-water-mirroring.jpg
+  inflating: templatemo_595_3d_coverflow/images/starry-night.jpg
+  inflating: templatemo_595_3d_coverflow/index.html
+  inflating: templatemo_595_3d_coverflow/templatemo-3d-coverflow-scripts.js
+  inflating: templatemo_595_3d_coverflow/templatemo-3d-coverflow.css
+docker@server1:~/apps/app$ ls
+index.php  templatemo_595_3d_coverflow  templatemo_595_3d_coverflow.zip
+docker@server1:~/apps/app$ cd templatemo_595_3d_coverflow/
+docker@server1:~/apps/app/templatemo_595_3d_coverflow$ ls
+images  index.html  templatemo-3d-coverflow.css  templatemo-3d-coverflow-scripts.js
+docker@server1:~/apps/app/templatemo_595_3d_coverflow$ cd ..
+docker@server1:~/apps/app$ ls
+index.php  templatemo_595_3d_coverflow  templatemo_595_3d_coverflow.zip
+docker@server1:~/apps/app$ rm templatemo_595_3d_coverflow.zip
+docker@server1:~/apps/app$ ls -al
+total 16
+drwxr-xr-x 3 docker docker 4096 Sep  1 23:38 .
+drwxr-xr-x 4 docker docker 4096 Sep  1 23:17 ..
+-rw-r--r-- 1 docker docker  323 Sep  1 23:35 index.php
+drwxr-xr-x 3 docker docker 4096 Aug  1 23:16 templatemo_595_3d_coverflow
+docker@server1:~/apps/app$ rm index.php
+docker@server1:~/apps/app$ mv templatemo_595_3d_coverflow/* /home/docker/apps/app/
+docker@server1:~/apps/app$ ls
+images      templatemo-3d-coverflow.css         templatemo_595_3d_coverflow
+index.html  templatemo-3d-coverflow-scripts.js
+docker@server1:~/apps/app$ docker exec -it myapp /bin/bash
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+2c20875d2250   myapp     --        -- / --             --        --        --          --
+bbc1043a8229   mydb      --        -- / --             --        --        --          --
+36f62dd0b9a0   muktos    --        -- / --             --        --        --          --
+
+docker@server1:~/apps/app$ docker system
+Usage:  docker system COMMAND
+
+Manage Docker
+
+Commands:
+  df          Show docker disk usage
+  events      Get real time events from the server
+  info        Display system-wide information
+  prune       Remove unused data
+
+Run 'docker system COMMAND --help' for more information on a command.
+docker@server1:~/apps/app$ docker system df
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          3         3         556.4MB   119.8MB (21%)
+Containers      3         3         106.5MB   0B (0%)
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B
+docker@server1:~/apps/app$ nano index.php
+docker@server1:~/apps/app$ cd ..
+docker@server1:~/apps$ ls
+app  db
+docker@server1:~/apps$ mkdir -p app2
+docker@server1:~/apps$ cp app/
+images/                             index.php                           templatemo-3d-coverflow-scripts.js
+index.html                          templatemo-3d-coverflow.css         templatemo_595_3d_coverflow/
+docker@server1:~/apps$ cp app/index.php /home/docker/apps/app2/
+docker@server1:~/apps$ pwd
+/home/docker/apps
+docker@server1:~/apps$ ls
+app  app2  db
+docker@server1:~/apps$ cd app
+docker@server1:~/apps/app$ ls
+images  index.html  index.php  templatemo-3d-coverflow.css  templatemo-3d-coverflow-scripts.js  templatemo_595_3d_coverflow
+docker@server1:~/apps/app$ docker ps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED             STATUS             PORTS                                         NAMES
+2c20875d2250   webmuktos:latest   "/bin/bash"              57 minutes ago      Up 57 minutes      0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       myapp
+bbc1043a8229   mariadb            "docker-entrypoint.s…"   58 minutes ago      Up 58 minutes      0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest      "/bin/bash"              About an hour ago   Up About an hour   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~/apps/app$ docker exec -it myapp /bin/bash
+root@myapp:/# apt-get install php php-pear php-mysql
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libapache2-mod-php8.4 libargon2-1 libedit2 libgcrypt20 libgpg-error-l10n libgpg-error0 libsodium23 libtext-charwidth-perl libtext-wrapi18n-perl libxslt1.1
+  php-common php-xml php8.4 php8.4-cli php8.4-common php8.4-mysql php8.4-opcache php8.4-readline php8.4-xml sensible-utils ucf
+Suggested packages:
+  rng-tools
+The following NEW packages will be installed:
+  libapache2-mod-php8.4 libargon2-1 libedit2 libgcrypt20 libgpg-error-l10n libgpg-error0 libsodium23 libtext-charwidth-perl libtext-wrapi18n-perl libxslt1.1
+  php php-common php-mysql php-pear php-xml php8.4 php8.4-cli php8.4-common php8.4-mysql php8.4-opcache php8.4-readline php8.4-xml sensible-utils ucf
+0 upgraded, 24 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7652 kB of archives.
+After this operation, 34.7 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://deb.debian.org/debian trixie/main amd64 sensible-utils all 0.0.25 [25.0 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 libtext-charwidth-perl amd64 0.04-11+b4 [9476 B]
+Get:3 http://deb.debian.org/debian trixie/main amd64 libtext-wrapi18n-perl all 0.06-10 [8808 B]
+Get:4 http://deb.debian.org/debian trixie/main amd64 ucf all 3.0052 [43.3 kB]
+Get:5 http://deb.debian.org/debian trixie/main amd64 libedit2 amd64 3.1-20250104-1 [93.8 kB]
+Get:6 http://deb.debian.org/debian trixie/main amd64 php-common all 2:96 [13.3 kB]
+Get:7 http://deb.debian.org/debian trixie/main amd64 php8.4-common amd64 8.4.11-1 [761 kB]
+Get:8 http://deb.debian.org/debian trixie/main amd64 php8.4-opcache amd64 8.4.11-1 [454 kB]
+Get:9 http://deb.debian.org/debian trixie/main amd64 php8.4-readline amd64 8.4.11-1 [12.7 kB]
+Get:10 http://deb.debian.org/debian trixie/main amd64 libargon2-1 amd64 0~20190702+dfsg-4+b2 [21.4 kB]
+Get:11 http://deb.debian.org/debian trixie/main amd64 libsodium23 amd64 1.0.18-1+b2 [165 kB]
+Get:12 http://deb.debian.org/debian trixie/main amd64 php8.4-cli amd64 8.4.11-1 [1849 kB]
+Get:13 http://deb.debian.org/debian trixie/main amd64 libapache2-mod-php8.4 amd64 8.4.11-1 [1787 kB]
+Get:14 http://deb.debian.org/debian trixie/main amd64 libgpg-error0 amd64 1.51-4 [82.1 kB]
+Get:15 http://deb.debian.org/debian trixie/main amd64 libgcrypt20 amd64 1.11.0-7 [843 kB]
+Get:16 http://deb.debian.org/debian trixie/main amd64 libgpg-error-l10n all 1.51-4 [114 kB]
+Get:17 http://deb.debian.org/debian-security trixie-security/main amd64 libxslt1.1 amd64 1.1.35-1.2+deb13u1 [233 kB]
+Get:18 http://deb.debian.org/debian trixie/main amd64 php8.4 all 8.4.11-1 [37.4 kB]
+Get:19 http://deb.debian.org/debian trixie/main amd64 php all 2:8.4+96 [3936 B]
+Get:20 http://deb.debian.org/debian trixie/main amd64 php8.4-mysql amd64 8.4.11-1 [120 kB]
+Get:21 http://deb.debian.org/debian trixie/main amd64 php-mysql all 2:8.4+96 [3968 B]
+Get:22 http://deb.debian.org/debian trixie/main amd64 php8.4-xml amd64 8.4.11-1 [678 kB]
+Get:23 http://deb.debian.org/debian trixie/main amd64 php-xml all 2:8.4+96 [3984 B]
+Get:24 http://deb.debian.org/debian trixie/main amd64 php-pear all 1:1.10.16+submodules+notgz-3 [290 kB]
+Fetched 7652 kB in 2s (3816 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79, <STDIN> line 24.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package sensible-utils.
+(Reading database ... 9114 files and directories currently installed.)
+Preparing to unpack .../00-sensible-utils_0.0.25_all.deb ...
+Unpacking sensible-utils (0.0.25) ...
+Selecting previously unselected package libtext-charwidth-perl:amd64.
+Preparing to unpack .../01-libtext-charwidth-perl_0.04-11+b4_amd64.deb ...
+Unpacking libtext-charwidth-perl:amd64 (0.04-11+b4) ...
+Selecting previously unselected package libtext-wrapi18n-perl.
+Preparing to unpack .../02-libtext-wrapi18n-perl_0.06-10_all.deb ...
+Unpacking libtext-wrapi18n-perl (0.06-10) ...
+Selecting previously unselected package ucf.
+Preparing to unpack .../03-ucf_3.0052_all.deb ...
+Moving old data out of the way
+Unpacking ucf (3.0052) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../04-libedit2_3.1-20250104-1_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20250104-1) ...
+Selecting previously unselected package php-common.
+Preparing to unpack .../05-php-common_2%3a96_all.deb ...
+Unpacking php-common (2:96) ...
+Selecting previously unselected package php8.4-common.
+Preparing to unpack .../06-php8.4-common_8.4.11-1_amd64.deb ...
+Unpacking php8.4-common (8.4.11-1) ...
+Selecting previously unselected package php8.4-opcache.
+Preparing to unpack .../07-php8.4-opcache_8.4.11-1_amd64.deb ...
+Unpacking php8.4-opcache (8.4.11-1) ...
+Selecting previously unselected package php8.4-readline.
+Preparing to unpack .../08-php8.4-readline_8.4.11-1_amd64.deb ...
+Unpacking php8.4-readline (8.4.11-1) ...
+Selecting previously unselected package libargon2-1:amd64.
+Preparing to unpack .../09-libargon2-1_0~20190702+dfsg-4+b2_amd64.deb ...
+Unpacking libargon2-1:amd64 (0~20190702+dfsg-4+b2) ...
+Selecting previously unselected package libsodium23:amd64.
+Preparing to unpack .../10-libsodium23_1.0.18-1+b2_amd64.deb ...
+Unpacking libsodium23:amd64 (1.0.18-1+b2) ...
+Selecting previously unselected package php8.4-cli.
+Preparing to unpack .../11-php8.4-cli_8.4.11-1_amd64.deb ...
+Unpacking php8.4-cli (8.4.11-1) ...
+Selecting previously unselected package libapache2-mod-php8.4.
+Preparing to unpack .../12-libapache2-mod-php8.4_8.4.11-1_amd64.deb ...
+Unpacking libapache2-mod-php8.4 (8.4.11-1) ...
+Selecting previously unselected package libgpg-error0:amd64.
+Preparing to unpack .../13-libgpg-error0_1.51-4_amd64.deb ...
+Unpacking libgpg-error0:amd64 (1.51-4) ...
+Selecting previously unselected package libgcrypt20:amd64.
+Preparing to unpack .../14-libgcrypt20_1.11.0-7_amd64.deb ...
+Unpacking libgcrypt20:amd64 (1.11.0-7) ...
+Selecting previously unselected package libgpg-error-l10n.
+Preparing to unpack .../15-libgpg-error-l10n_1.51-4_all.deb ...
+Unpacking libgpg-error-l10n (1.51-4) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../16-libxslt1.1_1.1.35-1.2+deb13u1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.35-1.2+deb13u1) ...
+Selecting previously unselected package php8.4.
+Preparing to unpack .../17-php8.4_8.4.11-1_all.deb ...
+Unpacking php8.4 (8.4.11-1) ...
+Selecting previously unselected package php.
+Preparing to unpack .../18-php_2%3a8.4+96_all.deb ...
+Unpacking php (2:8.4+96) ...
+Selecting previously unselected package php8.4-mysql.
+Preparing to unpack .../19-php8.4-mysql_8.4.11-1_amd64.deb ...
+Unpacking php8.4-mysql (8.4.11-1) ...
+Selecting previously unselected package php-mysql.
+Preparing to unpack .../20-php-mysql_2%3a8.4+96_all.deb ...
+Unpacking php-mysql (2:8.4+96) ...
+Selecting previously unselected package php8.4-xml.
+Preparing to unpack .../21-php8.4-xml_8.4.11-1_amd64.deb ...
+Unpacking php8.4-xml (8.4.11-1) ...
+Selecting previously unselected package php-xml.
+Preparing to unpack .../22-php-xml_2%3a8.4+96_all.deb ...
+Unpacking php-xml (2:8.4+96) ...
+Selecting previously unselected package php-pear.
+Preparing to unpack .../23-php-pear_1%3a1.10.16+submodules+notgz-3_all.deb ...
+Unpacking php-pear (1:1.10.16+submodules+notgz-3) ...
+Setting up libtext-charwidth-perl:amd64 (0.04-11+b4) ...
+Setting up php-common (2:96) ...
+Setting up libsodium23:amd64 (1.0.18-1+b2) ...
+Setting up libgpg-error0:amd64 (1.51-4) ...
+Setting up libargon2-1:amd64 (0~20190702+dfsg-4+b2) ...
+Setting up libedit2:amd64 (3.1-20250104-1) ...
+Setting up libgcrypt20:amd64 (1.11.0-7) ...
+Setting up libtext-wrapi18n-perl (0.06-10) ...
+Setting up sensible-utils (0.0.25) ...
+Setting up libxslt1.1:amd64 (1.1.35-1.2+deb13u1) ...
+Setting up libgpg-error-l10n (1.51-4) ...
+Setting up ucf (3.0052) ...
+Setting up php8.4-common (8.4.11-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/calendar.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/ctype.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/exif.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/fileinfo.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/ffi.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/ftp.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/gettext.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/iconv.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/pdo.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/phar.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/posix.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/shmop.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/sockets.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/sysvmsg.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/sysvsem.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/sysvshm.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/tokenizer.ini with new version
+Setting up php8.4-xml (8.4.11-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/dom.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/simplexml.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/xml.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/xmlreader.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/xmlwriter.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/xsl.ini with new version
+Setting up php8.4-opcache (8.4.11-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/opcache.ini with new version
+Setting up php-xml (2:8.4+96) ...
+Setting up php8.4-readline (8.4.11-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/readline.ini with new version
+Setting up php8.4-mysql (8.4.11-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/mysqlnd.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/mysqli.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/mods-available/pdo_mysql.ini with new version
+Setting up php8.4-cli (8.4.11-1) ...
+update-alternatives: using /usr/bin/php8.4 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar8.4 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar8.4 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/cli/php.ini with new version
+Setting up php-pear (1:1.10.16+submodules+notgz-3) ...
+Setting up php-mysql (2:8.4+96) ...
+Setting up libapache2-mod-php8.4 (8.4.11-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+Creating config file /etc/php/8.4/apache2/php.ini with new version
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+apache2_switch_mpm Switch to prefork
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of restart.
+apache2_invoke: Enable module php8.4
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of restart.
+Setting up php8.4 (8.4.11-1) ...
+Setting up php (2:8.4+96) ...
+Processing triggers for libc-bin (2.41-12) ...
+Processing triggers for php8.4-cli (8.4.11-1) ...
+Processing triggers for libapache2-mod-php8.4 (8.4.11-1) ...
+root@myapp:/# /etc/init.d/apache2 restart
+Restarting Apache httpd web server: apache2AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.4. Set the 'ServerName' directive globally to suppress this message
+.
+root@myapp:/# apt-get install php php-pear php-mysql
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+php is already the newest version (2:8.4+96).
+php-pear is already the newest version (1:1.10.16+submodules+notgz-3).
+php-mysql is already the newest version (2:8.4+96).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@myapp:/# /etc/init.d/apache2 status
+apache2 is running.
+root@myapp:/# exit
+exit
+
+docker@server1:~$ docker run -itd --name muktos -h muktos -p 8000:80 debian:latest  /bin/bash
+docker: Error response from daemon: Conflict. The container name "/muktos" is already in use by container "36f62dd0b9a042ac7d7b2d42c6c2d81b3761ae566f5057e20c49b3a766ed53c5". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+docker@server1:~$ docker start muktos
+muktos
+docker@server1:~$ docker start mydb
+mydb
+docker@server1:~$ docker start myapp
+myapp
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE              COMMAND                  CREATED       STATUS          PORTS                                         NAMES
+2c20875d2250   webmuktos:latest   "/bin/bash"              4 hours ago   Up 3 seconds    0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       myapp
+bbc1043a8229   mariadb            "docker-entrypoint.s…"   4 hours ago   Up 8 seconds    0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest      "/bin/bash"              4 hours ago   Up 12 seconds   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ docker ps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED       STATUS          PORTS                                         NAMES
+2c20875d2250   webmuktos:latest   "/bin/bash"              4 hours ago   Up 12 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       myapp
+bbc1043a8229   mariadb            "docker-entrypoint.s…"   4 hours ago   Up 16 seconds   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest      "/bin/bash"              4 hours ago   Up 21 seconds   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ docker save webmuktos:latest -o apps/webserver.tar
+docker@server1:~$ cd apps/
+docker@server1:~/apps$ ls
+app  app2  db  webserver.tar
+docker@server1:~/apps$ ls -al
+total 228456
+drwxr-xr-x 5 docker docker               4096 Sep  2 02:55 .
+drwx------ 6 docker docker               4096 Sep  2 02:50 ..
+drwxr-xr-x 4 docker docker               4096 Sep  2 00:09 app
+drwxr-xr-x 2 docker docker               4096 Sep  2 00:11 app2
+drwxr-xr-x 6    999 systemd-journal      4096 Sep  2 02:52 db
+-rw------- 1 docker docker          233917952 Sep  2 02:55 webserver.tar
+docker@server1:~/apps$ docker stop myapp
+myapp
+docker@server1:~/apps$ docker rmi myapp
+Error response from daemon: No such image: myapp:latest
+docker@server1:~/apps$ docker ps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED       STATUS                        PORTS                                         NAMES
+2c20875d2250   webmuktos:latest   "/bin/bash"              4 hours ago   Exited (137) 40 seconds ago                                                 myapp
+bbc1043a8229   mariadb            "docker-entrypoint.s…"   4 hours ago   Up 4 minutes                  0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest      "/bin/bash"              4 hours ago   Up 4 minutes                  0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~/apps$ docker rm myapp
+myapp
+docker@server1:~/apps$ docker rmi webmuktos:latest
+Untagged: webmuktos:latest
+Deleted: sha256:d4f87025e2883d4b105d8880be62697110b772b9be889296010171645bd675bc
+Deleted: sha256:f753812f63b8666008f52d14d68b716cb51a5e63da5076a3c051621a2169742a
+docker@server1:~/apps$ docker load -i webserver.tar
+005df3e94e4b: Loading layer [==================================================>]  110.1MB/110.1MB
+Loaded image: webmuktos:latest
+docker@server1:~/apps$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+webmuktos    latest    d4f87025e288   4 hours ago   226MB
+debian       latest    047bd8d81940   3 weeks ago   120MB
+mariadb      latest    b443cc897ca5   3 weeks ago   330MB
+docker@server1:~/apps$ docker ps -a
+CONTAINER ID   IMAGE           COMMAND                  CREATED       STATUS         PORTS                                         NAMES
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   4 hours ago   Up 5 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              4 hours ago   Up 6 minutes   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~/apps$ cd
+docker@server1:~$ docker login
+
+USING WEB-BASED LOGIN
+
+i Info → To sign in with credentials on the command line, use 'docker login -u <username>'
+
+
+Your one-time device confirmation code is: XHHB-TXVL
+Press ENTER to open your browser or submit your device code here: https://login.docker.com/activate
+
+Waiting for authentication in the browser…
+
+WARNING! Your credentials are stored unencrypted in '/home/docker/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
+docker@server1:~$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+webmuktos    latest    d4f87025e288   4 hours ago   226MB
+debian       latest    047bd8d81940   3 weeks ago   120MB
+mariadb      latest    b443cc897ca5   3 weeks ago   330MB
+docker@server1:~$ docker tag webmuktos muktos90/webmuktos
+docker@server1:~$ docker image ls
+REPOSITORY           TAG       IMAGE ID       CREATED       SIZE
+webmuktos            latest    d4f87025e288   4 hours ago   226MB
+muktos90/webmuktos   latest    d4f87025e288   4 hours ago   226MB
+debian               latest    047bd8d81940   3 weeks ago   120MB
+mariadb              latest    b443cc897ca5   3 weeks ago   330MB
+docker@server1:~$ docker push muktos90/webmuktos
+Using default tag: latest
+The push refers to repository [docker.io/muktos90/webmuktos]
+005df3e94e4b: Pushed
+cb9eb84282d0: Mounted from library/debian
+latest: digest: sha256:4c5e80669e4a9f2ea02bff12294e92a88a271940f99fe7761fd11c69d0b58722 size: 741
+docker@server1:~$ docker run -d -p 5000:5000 privateregistry -h privateregistry registry
+Unable to find image 'privateregistry:latest' locally
+docker: Error response from daemon: pull access denied for privateregistry, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+
+Run 'docker run --help' for more information
+docker@server1:~$ docker run -d -p 5000:5000 --name privateregistry -h privateregistry registry
+Unable to find image 'registry:latest' locally
+latest: Pulling from library/registry
+0368fd46e3c6: Pull complete
+56cbcc5405f0: Pull complete
+b65b097f3c34: Pull complete
+60999dff384a: Pull complete
+e6a3228d448c: Pull complete
+Digest: sha256:3725021071ec9383eb3d87ddbdff9ed602439b3f7c958c9c2fb941049ea6531d
+Status: Downloaded newer image for registry:latest
+cdd039542deaa423f0170ea86c9e81052c1847725be3660e41b3d4ed4a9f1446
+docker@server1:~$ docker ps -a
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+cdd039542dea   registry        "/entrypoint.sh /etc…"   10 seconds ago   Up 9 seconds    0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   4 hours ago      Up 34 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              4 hours ago      Up 34 minutes   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+cdd039542dea   registry        "/entrypoint.sh /etc…"   14 seconds ago   Up 13 seconds   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   4 hours ago      Up 34 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              4 hours ago      Up 34 minutes   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ docker image ls
+REPOSITORY           TAG       IMAGE ID       CREATED        SIZE
+webmuktos            latest    d4f87025e288   4 hours ago    226MB
+muktos90/webmuktos   latest    d4f87025e288   4 hours ago    226MB
+debian               latest    047bd8d81940   3 weeks ago    120MB
+mariadb              latest    b443cc897ca5   3 weeks ago    330MB
+registry             latest    3c52eedeec80   5 months ago   57.7MB
+docker@server1:~$ docker tag webmuktos 127.0.0.1:5000/webmuktos
+docker@server1:~$ docker image ls
+REPOSITORY                 TAG       IMAGE ID       CREATED        SIZE
+127.0.0.1:5000/webmuktos   latest    d4f87025e288   4 hours ago    226MB
+webmuktos                  latest    d4f87025e288   4 hours ago    226MB
+muktos90/webmuktos         latest    d4f87025e288   4 hours ago    226MB
+debian                     latest    047bd8d81940   3 weeks ago    120MB
+mariadb                    latest    b443cc897ca5   3 weeks ago    330MB
+registry                   latest    3c52eedeec80   5 months ago   57.7MB
+docker@server1:~$ docker push 127.0.0.1:5000/webmuktos:latest
+The push refers to repository [127.0.0.1:5000/webmuktos]
+005df3e94e4b: Pushed
+cb9eb84282d0: Pushed
+latest: digest: sha256:16a3ea85da28993bb48f843e7d048cce60bf681339ddb806d1c46d3ca580a211 size: 741
+docker@server1:~$ docker tag webmuktos 192.68.8.56:5000/webmuktos
+docker@server1:~$ docker image ls
+REPOSITORY                   TAG       IMAGE ID       CREATED        SIZE
+muktos90/webmuktos           latest    d4f87025e288   5 hours ago    226MB
+127.0.0.1:5000/webmuktos     latest    d4f87025e288   5 hours ago    226MB
+192.68.8.56:5000/webmuktos   latest    d4f87025e288   5 hours ago    226MB
+webmuktos                    latest    d4f87025e288   5 hours ago    226MB
+debian                       latest    047bd8d81940   3 weeks ago    120MB
+mariadb                      latest    b443cc897ca5   3 weeks ago    330MB
+registry                     latest    3c52eedeec80   5 months ago   57.7MB
+docker@server1:~$ docker tag webmuktos 192.168.8.56:5000/webmuktos
+docker@server1:~$ docker push 192.168.8.56:5000/webmuktos:latest
+The push refers to repository [192.168.8.56:5000/webmuktos]
+Get "https://192.168.8.56:5000/v2/": http: server gave HTTP response to HTTPS client
+docker@server1:~$ docker image ls
+REPOSITORY                    TAG       IMAGE ID       CREATED        SIZE
+127.0.0.1:5000/webmuktos      latest    d4f87025e288   5 hours ago    226MB
+192.168.8.56:5000/webmuktos   latest    d4f87025e288   5 hours ago    226MB
+192.68.8.56:5000/webmuktos    latest    d4f87025e288   5 hours ago    226MB
+webmuktos                     latest    d4f87025e288   5 hours ago    226MB
+muktos90/webmuktos            latest    d4f87025e288   5 hours ago    226MB
+debian                        latest    047bd8d81940   3 weeks ago    120MB
+mariadb                       latest    b443cc897ca5   3 weeks ago    330MB
+registry                      latest    3c52eedeec80   5 months ago   57.7MB
+docker@server1:~$ docker rmi 192.68.8.56:5000/webmuktos
+Untagged: 192.68.8.56:5000/webmuktos:latest
+docker@server1:~$ docker image ls
+REPOSITORY                    TAG       IMAGE ID       CREATED        SIZE
+webmuktos                     latest    d4f87025e288   5 hours ago    226MB
+muktos90/webmuktos            latest    d4f87025e288   5 hours ago    226MB
+127.0.0.1:5000/webmuktos      latest    d4f87025e288   5 hours ago    226MB
+192.168.8.56:5000/webmuktos   latest    d4f87025e288   5 hours ago    226MB
+debian                        latest    047bd8d81940   3 weeks ago    120MB
+mariadb                       latest    b443cc897ca5   3 weeks ago    330MB
+registry                      latest    3c52eedeec80   5 months ago   57.7MB
+docker@server1:~$ docker image ls
+REPOSITORY                    TAG       IMAGE ID       CREATED        SIZE
+webmuktos                     latest    d4f87025e288   5 hours ago    226MB
+muktos90/webmuktos            latest    d4f87025e288   5 hours ago    226MB
+127.0.0.1:5000/webmuktos      latest    d4f87025e288   5 hours ago    226MB
+192.168.8.56:5000/webmuktos   latest    d4f87025e288   5 hours ago    226MB
+debian                        latest    047bd8d81940   3 weeks ago    120MB
+mariadb                       latest    b443cc897ca5   3 weeks ago    330MB
+registry                      latest    3c52eedeec80   5 months ago   57.7MB
+docker@server1:~$ sudo nano /etc/docker/daemon.js
+[sudo] password for docker:
+docker@server1:~$ systemctl daemon-reload
+==== AUTHENTICATING FOR org.freedesktop.systemd1.reload-daemon ====
+Authentication is required to reload the systemd state.
+Multiple identities can be used for authentication:
+ 1.  Inixindo,,, (inixindo)
+ 2.  ,,, (docker)
+Choose identity to authenticate as (1-2): ^C
+docker@server1:~$ sudo systemctl daemon-reload
+docker@server1:~$ sudo systemctl restart docker
+docker@server1:~$
+docker@server1:~$ docker push 192.168.8.56:5000/webmuktos:latest
+The push refers to repository [192.168.8.56:5000/webmuktos]
+Get "https://192.168.8.56:5000/v2/": dial tcp 192.168.8.56:5000: connect: connection refused
+docker@server1:~$ docker push 192.168.8.57:5000/webmuktos:latest
+The push refers to repository [192.168.8.57:5000/webmuktos]
+An image does not exist locally with the tag: 192.168.8.57:5000/webmuktos
+docker@server1:~$ docker tag webmuktos 192.168.8.57:5000/webmuktos
+docker@server1:~$ docker push 192.168.8.57:5000/webmuktos:latest
+The push refers to repository [192.168.8.57:5000/webmuktos]
+Get "https://192.168.8.57:5000/v2/": http: server gave HTTP response to HTTPS client
+docker@server1:~$ docker push 192.168.8.57:5000/webmuktos
+Using default tag: latest
+The push refers to repository [192.168.8.57:5000/webmuktos]
+Get "https://192.168.8.57:5000/v2/": http: server gave HTTP response to HTTPS client
+docker@server1:~$ cat /etc/docker/daemon.js
+{
+  "insecure-registries" : ["192.168.8.56:5000","192.168.8.57:5000"]
+}
+docker@server1:~$ docker image ls
+REPOSITORY                    TAG       IMAGE ID       CREATED        SIZE
+127.0.0.1:5000/webmuktos      latest    d4f87025e288   5 hours ago    226MB
+192.168.8.56:5000/webmuktos   latest    d4f87025e288   5 hours ago    226MB
+192.168.8.57:5000/webmuktos   latest    d4f87025e288   5 hours ago    226MB
+webmuktos                     latest    d4f87025e288   5 hours ago    226MB
+muktos90/webmuktos            latest    d4f87025e288   5 hours ago    226MB
+debian                        latest    047bd8d81940   3 weeks ago    120MB
+mariadb                       latest    b443cc897ca5   3 weeks ago    330MB
+registry                      latest    3c52eedeec80   5 months ago   57.7MB
+docker@server1:~$ sudo systemctl daemon-reexec
+docker@server1:~$ sudo systemctl restart docker
+docker@server1:~$ docker push 192.168.8.57:5000/webmuktos
+Using default tag: latest
+The push refers to repository [192.168.8.57:5000/webmuktos]
+Get "https://192.168.8.57:5000/v2/": http: server gave HTTP response to HTTPS client
+docker@server1:~$ docker push 192.168.8.56:5000/webmuktos
+Using default tag: latest
+The push refers to repository [192.168.8.56:5000/webmuktos]
+Get "https://192.168.8.56:5000/v2/": dial tcp 192.168.8.56:5000: connect: connection refused
+docker@server1:~$ docker push 192.168.8.57:5000/webmuktos
+Using default tag: latest
+The push refers to repository [192.168.8.57:5000/webmuktos]
+Get "https://192.168.8.57:5000/v2/": http: server gave HTTP response to HTTPS client
+docker@server1:~$ sudo mv /etc/docker/daemon.js /etc/docker/daemon.json
+docker@server1:~$ sudo systemctl daemon-reexec
+docker@server1:~$ sudo systemctl restart docker
+docker@server1:~$ docker push 192.168.8.57:5000/webmuktos
+Using default tag: latest
+The push refers to repository [192.168.8.57:5000/webmuktos]
+005df3e94e4b: Pushed
+cb9eb84282d0: Pushed
+latest: digest: sha256:16a3ea85da28993bb48f843e7d048cce60bf681339ddb806d1c46d3ca580a211 size: 741
+docker@server1:~$ docker push 192.168.8.56:5000/webmuktos
+Using default tag: latest
+The push refers to repository [192.168.8.56:5000/webmuktos]
+Get "http://192.168.8.56:5000/v2/": dial tcp 192.168.8.56:5000: connect: connection refused
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+docker@server1:~$ docker ps -a
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS                       PORTS     NAMES
+cdd039542dea   registry        "/entrypoint.sh /etc…"   33 minutes ago   Exited (2) 7 minutes ago               privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   5 hours ago      Exited (0) 7 minutes ago               mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              5 hours ago      Exited (137) 7 minutes ago             muktos
+docker@server1:~$ docker start privateregistry
+privateregistry
+docker@server1:~$ docker start mydb
+mydb
+docker@server1:~$ docker start muktos
+muktos
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+cdd039542dea   registry        "/entrypoint.sh /etc…"   34 minutes ago   Up 16 seconds   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   5 hours ago      Up 8 seconds    0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              5 hours ago      Up 4 seconds    0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ cat /etc/docker/daemon.json
+{
+  "insecure-registries" : ["192.168.8.56:5000","192.168.8.57:5000"]
+}
+docker@server1:~$ pwd
+/home/docker
+docker@server1:~$ ls
+apps  templatemo_595_3d_coverflow.zip
+docker@server1:~$ mkdir registry
+docker@server1:~$ cd registry/
+docker@server1:~/registry$ mkdir cert
+docker@server1:~/registry$ openssl req -newkey rsa:4096 -nodes -sha256 -keyout registry/cert/domain.ke                                                        y -addext "subjectAltName=DNS:privateregistry.local" -x509 -days 365 -out registry/cert/domain.crt
+...+...+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.........+...............                                                        ..+.......+..+...+......+....+.....+...+...+......+.+.........+....................+......+.......+...                                                        .....+............+.......+...+......+......+.........+.....+.+.....+.........+.+.....+.+..+.+........                                                        ...+.+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.........+........+.......+.                                                        ...........+.......................+....+.........+...........+....+......+.....+...+...+.......+.....                                                        .................................+.......+..+....+..+...+.+...+...+............+...........+......+...                                                        +.+.....+.+........+...+....+...+..+.........+....+......+......+...........+....+...+.....+..........                                                        +.....+......+......+.............+..+.........+....+..................+............+........+...+....                                                        .................+...+.+......+.....+......+.........+.............+++++++++++++++++++++++++++++++++++                                                        ++++++++++++++++++++++++++++++
+.........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+......+++++++++++++++++++                                                        ++++++++++++++++++++++++++++++++++++++++++++++*..........+......+.........+.........+.......+...+.....                                                        .+.....+..................+..........+...........+............+.......+.....+.+..............+......+.                                                        ...+.....+.......+...+..................+............+..+......+.......+..+.+....................+....                                                        .....+......+............+.+..+....+..............+...............+.......+.....+...+....+......+.....                                                        ......+...+...+....+...........+....+......+...............+..+.+..............+...+...............+..                                                        ..+...+..+.+........+......+......+.......+.....+..................+...+....+......+..............+...                                                        ....+...+...............+..+...................+...............+..+...+.....................+.........                                                        .........+.......+......+.....+...............+...+............+....+...+............+...+...+........                                                        ....+...+...+.....+.........+......+....+..+...+......+.+......+...............+...+......+...........                                                        ...+....+...+...+..+....+...+............+......+...+..+...+............+....+...+........+...+....+..                                                        +.+..+............+...+......+.......+...+...............+............+.........+...............+...+.                                                        ..+........+.......+..+.........................+........+....+......+........+.+...........+.........                                                        +.........+.+.........+..+..........+..............+....+.........+......+....................+......+                                                        .+.....+...+.+........+......+..........+...........+.+.....+..................+.......+.........+...+                                                        ...+...+.....+......+....+..+....+.....+...+...+...+....+...........+....+..+......+.......+..+.......                                                        ...+......+........+.+.....+...+..................+.........+......+.........+.+...+..............+.+.                                                        .............+.+.........+...........+.+.....+.........+......+...+.+.....+.......+..+..........+...+.                                                        ....+..........+............+........+...+.........+.+...........................+.........+......+...                                                        ......+...+...+.....+...+....+..+...+.+.........+........+..................+.......+...+.....+.+.....                                                        .+...+.........+..+..........+.....+.+.............................+...+.............+.....+..........                                                        +..+.+......+........+..................+...+.+...+...............+......+......+.....+......+........                                                        .......+...+.+...+...+..+.............+...+.....+.+.....+.........+......+.............+......+......+                                                        .........+.....+.+........+.............+..+.............+...+..+....+...+...........+..........+.....                                                        +.........+...............+......+.+...+........+...+................+.....+.+..+......+......+.......                                                        ..+......+.+...............+..+.....................+.......+...+.........+...+...+......+......+...+.                                                        ....+....+..+.............+..+....+..............+.+...............+...............+..+............+.+                                                        ......+.....+...+.....................+....+......+.................+....+...+..+......+..........+..+                                                        .......+.....+.........+.+.....+....+......+...........+....+...........++++++++++++++++++++++++++++++                                                        +++++++++++++++++++++++++++++++++++
+req: Can't open "registry/cert/domain.key" for writing, No such file or directory
+docker@server1:~/registry$ pwd
+/home/docker/registry
+docker@server1:~/registry$ cd cert/
+docker@server1:~/registry/cert$ openssl req -newkey rsa:4096 -nodes -sha256 -keyout registry/cert/doma                                                        in.key -addext "subjectAltName=DNS:privateregistry.local" -x509 -days 365 -out registry/cert/domain.cr                                                        t
+.+.....+.+......+........+....+...+........+.+...+..+................+..+..........+......+..+....+...                                                        ...........+...............+......+...+...............+.......+...+..+.+...+.....+......+.............                                                        +..+...+................+.....+.+.....+....+.....+.......+..+.......+...+..+...+..........+...........                                                        +.......+..+...+............+................+......+...+...+..+.+......+.....+......+.........+.+....                                                        ....+.......+...+..............+.+..+.........++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                                        +++++++++*...+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*............+..+.....                                                        .+.+...........+.......+...+..+......+......+.+...+.........+..+......+............+................+.                                                        .............+......+......+.+..+...+...+.......+.........+...+...+........+............+....+........                                                        .+.....+.......+.....+...+....+......+............+..............+.+............+......+.........+....                                                        .+.+..+............+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.+...+..+.+...+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..........+.....+.+                                                        ...+...+..+...+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*........+.........                                                        ...........+.............+......+..+............+.+....................+................+........+....                                                        ........+...+.......+...+.....+...+...+......+.........+.......+...+.........+..+...+......+.+...+...+                                                        ...+....................+......................+..+.............+.................+.+.........+..+....                                                        +..+...+............+...+.+........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+req: Can't open "registry/cert/domain.key" for writing, No such file or directory
+docker@server1:~/registry/cert$ pwd
+/home/docker/registry/cert
+docker@server1:~/registry/cert$ cd ..
+docker@server1:~/registry$ cd ..
+docker@server1:~$ openssl req -newkey rsa:4096 -nodes -sha256 -keyout registry/cert/domain.key -addext "subjectAltName=DNS:privateregistry.local" -x509 -days 365 -out registry/cert/domain.crt
+...+...+..+.+.....+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*............+.+............+..+....+......+...+.....+.+......+......+.........+..............+.........+.......+.....+.+.....+....+...+..+....+.....+.......+..+.+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.......+..............+.+..+....+......+.......................+.+.........+.....+......+.........+.+.....+......+.........+..................+......+.+......+..............+...+.....................+.......+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+....+...+.+......+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+.........+..+......+.......+......+..+.......+...+.....+...+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.........+.....+.+..+.+......+.....+..........+..............+.......+..+.....................+....+...+.....+....+..............+......+.............+..+.........+.+...+...........+.......+.....+.............+..............+......+....+...+...+......+...........+.......+.................+......+.........+.+...+.........+.....+...+............+.......+......+..............+.+...+....................+............+...+....+..+.+.....+.......+.....+......+....+...+...+.........+..+.+........+......+......+............+...+..........+...+..............+............+.............+.....+.......+...+..+...................+..+...................+......+...+..+.........+....+...............+...............+..+.......+...........+..........+.....+.......+..............+......+.......+..+....+..............+..................+....+........+......+..........+..+...............+....+...+...+............+......+......+.........+......+........+............+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:ID
+State or Province Name (full name) [Some-State]:EAST JAVA
+Locality Name (eg, city) []:SURABAYA
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:PERUMDA SURYA SEMBADA SURABAYA
+Organizational Unit Name (eg, section) []:SERVICES
+Common Name (e.g. server FQDN or YOUR name) []:privateregistry.local
+Email Address []:
+docker@server1:~$ ls
+apps  registry  templatemo_595_3d_coverflow.zip
+docker@server1:~$ ls registry/cert/
+domain.crt  domain.key
+docker@server1:~$ mkdri registry/auth
+-bash: mkdri: command not found
+docker@server1:~$ mkdir registry/auth
+docker@server1:~$ docker run --entrypoint htpasswd httpd:2 -Bbn muktos pdam1
+Unable to find image 'httpd:2' locally
+2: Pulling from library/httpd
+396b1da7636e: Pull complete
+40712a21826a: Pull complete
+4f4fb700ef54: Pull complete
+d2b1a5ae8cd3: Pull complete
+7e8bbac53823: Pull complete
+779ccd583397: Pull complete
+Digest: sha256:3198c1839e1a875f8b83803083758a7635f1ae999f0601f30f2f3b8ce2ac99e3
+Status: Downloaded newer image for httpd:2
+muktos:$2y$05$Y7/6kz0eeJxGbaVrhJlJU.mWOG6zDb6w2FP2W1SUR4ooNagIUPp.S
+
+docker@server1:~$ docker run --entrypoint htpasswd httpd:2 -Bbn muktos pdam1 > registry/auth/passwd
+docker@server1:~$ ls registry/auth/
+passwd
+docker@server1:~$ cat registry/auth/passwd
+muktos:$2y$05$KRvRHT1ZrxbuxsQSxmiM/.p8aqehuWqeV1N.dRtZ1IFcFQ63w1tMS
+
+docker@server1:~$ docker stop privateregistry
+privateregistry
+docker@server1:~$ docker rm privateregistry
+privateregistry
+docker@server1:~$ docker run -d -p 443:5000 --name privateregistry -h privateregistry -v `pwd`/registry/auth:/auth -v `pwd`/registry/cert:/cert -e REGISTRY_AUTH=htpasswd -e REGISTRY_AUTH_HTPASSWD_REALM="Registry realm" -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/passwd -e REGISTRY_HTTP_TLS_CERTIFICATE=/cert/domain.crt -e REGISTRY_HTTP_TLS_KEY=/cert/domain.key registry:2
+Unable to find image 'registry:2' locally
+2: Pulling from library/registry
+44cf07d57ee4: Pull complete
+bbbdd6c6894b: Pull complete
+8e82f80af0de: Pull complete
+3493bf46cdec: Pull complete
+6d464ea18732: Pull complete
+Digest: sha256:a3d8aaa63ed8681a604f1dea0aa03f100d5895b6a58ace528858a7b332415373
+Status: Downloaded newer image for registry:2
+7281d706d9df2a337905dd18fb81a755c61d0ff8749cc98e66fcb5eb131b91ac
+docker@server1:~$ sudo mkdir /etc/docker/certs.d
+docker@server1:~$ sudo mkdir /etc/docker/certs.d/privateregistry.local
+docker@server1:~$ sudo cp registry/cert/domain.crt /etc/docker/certs.d/privateregistry.local/ca.crt
+docker@server1:~$ sudo nano /etc/hosts
+docker@server1:~$ sudo systemctl restart docker.service
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+docker@server1:~$ docker restart privateregistry
+privateregistry
+docker@server1:~$ docker restart mydb
+mydb
+docker@server1:~$ docker restart m
+muktos  mydb
+docker@server1:~$ docker restart muktos
+muktos
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED         STATUS          PORTS                                         NAMES
+7281d706d9df   registry:2      "/entrypoint.sh /etc…"   4 minutes ago   Up 18 seconds   0.0.0.0:443->5000/tcp, [::]:443->5000/tcp     privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   5 hours ago     Up 9 seconds    0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              5 hours ago     Up 3 seconds    0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ cat /etc/hosts
+127.0.0.1       localhost
+127.0.1.1       osboxes
+127.0.0.1       privateregistry.local
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+docker@server1:~$ docker login privateregistry.local
+Username: muktos
+Password:
+Error response from daemon: Get "http://privateregistry.local/v2/": dial tcp 127.0.0.1:80: connect: connection refused
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED         STATUS         PORTS                                         NAMES
+7281d706d9df   registry:2      "/entrypoint.sh /etc…"   8 minutes ago   Up 4 minutes   0.0.0.0:443->5000/tcp, [::]:443->5000/tcp     privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   5 hours ago     Up 4 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              5 hours ago     Up 3 minutes   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ ping privateregistry.local -c 4
+PING privateregistry.local (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.034 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.076 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=3 ttl=64 time=0.088 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=4 ttl=64 time=0.092 ms
+
+--- privateregistry.local ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3062ms
+rtt min/avg/max/mdev = 0.034/0.072/0.092/0.023 ms
+docker@server1:~$ docker login privateregistry.local
+Username: muktos90
+Password:
+Error response from daemon: Get "http://privateregistry.local/v2/": dial tcp 127.0.0.1:80: connect: connection refused
+docker@server1:~$ docker login privateregistry.local
+Username: muktos90
+Password:
+Error response from daemon: Get "http://privateregistry.local/v2/": dial tcp 127.0.0.1:80: connect: connection refused
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+7281d706d9df   registry:2      "/entrypoint.sh /etc…"   17 minutes ago   Up 12 minutes   0.0.0.0:443->5000/tcp, [::]:443->5000/tcp     privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   5 hours ago      Up 12 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              5 hours ago      Up 12 minutes   0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~$ docker login privateregistry.local
+Username: muktos
+Password:
+
+WARNING! Your credentials are stored unencrypted in '/home/docker/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
+docker@server1:~$ docker image ls
+REPOSITORY                    TAG       IMAGE ID       CREATED         SIZE
+webmuktos                     latest    d4f87025e288   5 hours ago     226MB
+muktos90/webmuktos            latest    d4f87025e288   5 hours ago     226MB
+127.0.0.1:5000/webmuktos      latest    d4f87025e288   5 hours ago     226MB
+192.168.8.56:5000/webmuktos   latest    d4f87025e288   5 hours ago     226MB
+192.168.8.57:5000/webmuktos   latest    d4f87025e288   5 hours ago     226MB
+debian                        latest    047bd8d81940   3 weeks ago     120MB
+httpd                         2         199e3a035264   3 weeks ago     117MB
+mariadb                       latest    b443cc897ca5   3 weeks ago     330MB
+registry                      latest    3c52eedeec80   5 months ago    57.7MB
+registry                      2         26b2eb03618e   23 months ago   25.4MB
+docker@server1:~$ docker tag webmuktos privateregistry.local/webbmuktos
+docker@server1:~$ docker push privateregistry.local/webbmuktos
+Using default tag: latest
+The push refers to repository [privateregistry.local/webbmuktos]
+005df3e94e4b: Pushed
+cb9eb84282d0: Pushed
+latest: digest: sha256:16a3ea85da28993bb48f843e7d048cce60bf681339ddb806d1c46d3ca580a211 size: 741
+
+====================================================================================================================================================================================
+
+E. Otomasi Docker
+
+Menjalankan Container dengan Docker File
+
+1. Jalankan Container mydb
+
+docker run -itd --name mydb -h mydb -p 3306:3306 -v /home/docker/aplikasi/db:/var/lib/mysql -e MARIADB_DATABASE=myapp -e MARIADB_USER=myappuser -e MARIADB_PASSWORD=abc -e MARIADB_ROOT_PASSWORD=abc mariadb
+
+jika masih ada container mydb
+
+docker restart mydb
+
+2. membuat docker file pada directory aplikasi
+
+pastikan kita berada didalam direktori /home/docker
+
+nano aplikasi/Dockerfile
+
+FROM php:8.2-apache
+RUN docker-php-ext-install mysqli
+COPY ./app/ /var/www/html
+
+3. Compile menjadi image baru dengan nama prod-server
+
+cd aplikasi
+docker build -t prod-server .
+
+
+
+4. Jalankan container baru dengan perintah
+
+docker run -itd --name my_app -h my_app --link mydb -p 8080:80 prod-server
+
+5. cek web pada web browser
+
+iphost:8080
+
+docker@server1:~/apps$ docker build -t prod-server .
+[+] Building 9.2s (8/8) FINISHED                                                                                                               docker:default
+ => [internal] load build definition from Dockerfile                                                                                                     0.0s
+ => => transferring dockerfile: 117B                                                                                                                     0.0s
+ => [internal] load metadata for docker.io/library/php:8.2-apache                                                                                        1.0s
+ => [internal] load .dockerignore                                                                                                                        0.0s
+ => => transferring context: 2B                                                                                                                          0.0s
+ => CACHED [1/3] FROM docker.io/library/php:8.2-apache@sha256:e4db41c5632d1bafe9a2839ecda3c26023d8d7756cb98f18714351d2b3ad499f                           0.0s
+ => [internal] load build context                                                                                                                        0.0s
+ => => transferring context: 660B                                                                                                                        0.0s
+ => [2/3] RUN docker-php-ext-install mysqli                                                                                                              8.1s
+ => [3/3] COPY ./app/ /var/www/html                                                                                                                      0.0s
+ => exporting to image                                                                                                                                   0.0s
+ => => exporting layers                                                                                                                                  0.0s
+ => => writing image sha256:28bb79f23d6966dba3cc1dc2f592990e69bed36ace10145f829ed2ac3fdd3357                                                             0.0s
+ => => naming to docker.io/library/prod-server                                                                                                           0.0s
+docker@server1:~/apps$ docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED        STATUS         PORTS                                         NAMES
+7281d706d9df   registry:2      "/entrypoint.sh /etc…"   18 hours ago   Up 18 hours    0.0.0.0:443->5000/tcp, [::]:443->5000/tcp     privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   23 hours ago   Up 4 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              23 hours ago   Up 18 hours    0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+docker@server1:~/apps$ docker image ls
+REPOSITORY                         TAG       IMAGE ID       CREATED          SIZE
+prod-server                        latest    28bb79f23d69   38 seconds ago   500MB
+192.168.8.57:5000/webmuktos        latest    d4f87025e288   23 hours ago     226MB
+webmuktos                          latest    d4f87025e288   23 hours ago     226MB
+muktos90/webmuktos                 latest    d4f87025e288   23 hours ago     226MB
+privateregistry.local/webbmuktos   latest    d4f87025e288   23 hours ago     226MB
+127.0.0.1:5000/webmuktos           latest    d4f87025e288   23 hours ago     226MB
+192.168.8.56:5000/webmuktos        latest    d4f87025e288   23 hours ago     226MB
+debian                             latest    047bd8d81940   3 weeks ago      120MB
+httpd                              2         199e3a035264   3 weeks ago      117MB
+mariadb                            latest    b443cc897ca5   3 weeks ago      330MB
+registry                           latest    3c52eedeec80   5 months ago     57.7MB
+registry                           2         26b2eb03618e   23 months ago    25.4MB
+docker@server1:~/apps$ ls
+app  app2  db  Dockerfile  webserver.tar
+docker@server1:~/apps$ cd app
+docker@server1:~/apps/app$ ls
+images  index.html  index.php  templatemo-3d-coverflow.css  templatemo-3d-coverflow-scripts.js  templatemo_595_3d_coverflow
+docker@server1:~/apps/app$ cd ..
+docker@server1:~/apps$ cd app2/
+docker@server1:~/apps/app2$ ls
+index.php
+docker@server1:~/apps/app2$ cd ..
+docker@server1:~/apps$ cd
+docker@server1:~$ docker run -itd --name my_app -h my_app --link mydb -p 8080:80 prod-server
+aa2618102615928f6357e1c66372455a8059811c5eb0554baaa4aceb6e618f02
+docker@server1:~$ docker ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED         STATUS         PORTS                                         NAMES
+aa2618102615   prod-server     "docker-php-entrypoi…"   3 seconds ago   Up 3 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       my_app
+7281d706d9df   registry:2      "/entrypoint.sh /etc…"   18 hours ago    Up 18 hours    0.0.0.0:443->5000/tcp, [::]:443->5000/tcp     privateregistry
+bbc1043a8229   mariadb         "docker-entrypoint.s…"   23 hours ago    Up 7 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp   mydb
+36f62dd0b9a0   debian:latest   "/bin/bash"              24 hours ago    Up 18 hours    0.0.0.0:8000->80/tcp, [::]:8000->80/tcp       muktos
+
+
+Menjalankan container baru dengan Docker compose
+
+
+1. Installasi aplikasi docker compose
+
+sudo apt-get install docker-compose
+
+2. pastikan tidak ada container yang berjalan
+
+3. pindahkan file Dockerfile ke dalam folder app
+
+pastikan kita berada di direktory /home/docker
+
+cp aplikasi/Dockerfile aplikasi/app/Dockerfile 
+
+Kita ubah direktory yang ada di dalam Dockerfile
+nano aplikasi/app/Dockerfile
+
+FROM php:8.2-apache
+RUN docker-php-ext-install mysqli
+COPY . /var/www/html
+
+4. Membuat file docker-compose.yml didalam folder aplikasi
+
+kita pastikan sudah berada didalam folder aplikasi
+
+cd aplikasi
+
+nano docker-compose.yml
+
+
+version: "2"
+services:
+  mydb:
+    image: mariadb:latest
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    restart: always
+    hostname: mydb
+    container_name: mydb
+    environment:
+      MARIADB_ROOT_PASSWORD: abc
+      MARIADB_DATABASE: myapp
+      MARIADB_USER: myappuser
+      MARIADB_PASSWORD: abc
+    volumes:
+      - ./db:/var/lib/mysql
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html
+    restart: always
+
+    depends_on:
+      - mydb
+    container_name: app
+    hostname: app
+  myadmin:
+    image: phpmyadmin:latest
+    ports:
+      - "82:80"
+    depends_on:
+      - mydb
+    restart: always
+    environment:
+      PMA_HOST: mydb
+    container_name: myadmin
+    hostname: myadmin
+
+
+5. lalu build atau running docker-compose.yml 
+
+kita pastikan sudah berada didalam folder aplikasi
+
+docker-compose up -d --build
+
+docker@server1:~$ docker rm -f $(docker ps -a -q)
+aa2618102615
+7281d706d9df
+a00a8ae9dfe3
+efb0c53eb4bb
+bbc1043a8229
+36f62dd0b9a0
+docker@server1:~/apps$ ls -al
+total 228460
+drwxr-xr-x 4 docker docker               4096 Sep  2 23:00 .
+drwx------ 8 docker docker               4096 Sep  2 22:25 ..
+drwxr-xr-x 4 docker docker               4096 Sep  2 22:54 app
+drwxr-xr-x 6    999 systemd-journal      4096 Sep  2 22:27 db
+-rw-r--r-- 1 docker docker                792 Sep  2 23:00 docker-compose.yml
+-rw-r--r-- 1 docker docker                 80 Sep  2 22:31 Dockerfile
+-rw------- 1 docker docker          233917952 Sep  2 02:55 webserver.tar
+docker@server1:~/apps$ docker-compose up -d --build
+Creating network "apps_default" with the default driver
+Building app
+Sending build context to Docker daemon  415.7kB
+Step 1/3 : FROM php:8.2-apache
+8.2-apache: Pulling from library/php
+396b1da7636e: Already exists
+10b731a0229f: Already exists
+759df4fda9eb: Already exists
+b84170966370: Already exists
+ca765eff712f: Already exists
+71d7acda44c3: Already exists
+aa8657555675: Already exists
+819443c89dcc: Already exists
+05afda0128fe: Already exists
+39fc65577ce1: Already exists
+925278ddd016: Already exists
+5d8fabf0ca99: Already exists
+2e9cb0b67c18: Already exists
+af388e74f0fa: Already exists
+4f4fb700ef54: Already exists
+Digest: sha256:e4db41c5632d1bafe9a2839ecda3c26023d8d7756cb98f18714351d2b3ad499f
+Status: Downloaded newer image for php:8.2-apache
+ ---> 819e3bf99bf0
+Step 2/3 : RUN docker-php-ext-install mysqli
+ ---> Running in 6ec69a186028
+Creating mydb ... done
+Creating app     ... done
+Creating myadmin ... done
+docker@server1:~/apps$ docker ps
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS         PORTS                                       NAMES
+845e1eec0984   phpmyadmin:latest   "/docker-entrypoint.…"   10 seconds ago   Up 9 seconds   0.0.0.0:82->80/tcp, :::82->80/tcp           myadmin
+762c2d709c42   apps_app            "docker-php-entrypoi…"   10 seconds ago   Up 9 seconds   0.0.0.0:8080->80/tcp, :::8080->80/tcp       app
+69e81957eacb   mariadb:latest      "docker-entrypoint.s…"   11 seconds ago   Up 9 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   mydb
+
+test on your browser with port 8080 and 82
+
+==================================================================================================================================================
+
+F. Menggunakan Reverse Proxy pada Docker
+
+1. membuat directory terlebih dahulu
+
+Pastikan kita berada didalam diretory /home/docker
+
+mkdir website
+mkdir website/web-a
+mkdir website/web-a/wp
+mkdir website/web-a/db
+mkdir website/web-b
+mkdir website/web-b/wp
+mkdir website/web-b/db
+
+2. Membuat network untuk website
+
+docker network create website
+
+3. validasi dengan cara
+
+docker network ls
+
+4. Membuat file docker-compose.yml untuk container web-a dan web-b
+
+Pastikan kita berada didalam direktory /home/docker
+
+nano website/docker-compose.yml
+
+version: '2'
+services:
+  nginx:
+    image: nginxproxy/nginx-proxy:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    environment:
+      - TRUST_DOWNSTREAM_PROXY=false
+    restart: always
+    networks:
+      - website
+  db-a:
+    image: mariadb:latest
+    container_name: db-a
+    environment:
+      MARIADB_ROOT_PASSWORD: abc
+      MARIADB_DATABASE: website
+      MARIADB_USER: webuser
+      MARIADB_PASSWORD: abc
+    volumes:
+      - ./web-a/db:/var/lib/mysql
+    expose:
+      - "3306"
+    hostname: db-a
+    restart: always
+    networks:
+      - website
+  web-a:
+    image: wordpress:latest
+    container_name: web-a
+    hostname: web-a
+    depends_on:
+      - db-a
+    expose:
+      - "80"
+    volumes:
+      - ./web-a/wp:/var/www/html
+    environment:
+      VIRTUAL_HOST: web-a.local
+      WORDPRESS_DB_HOST: db-a:3306
+      WORDPRESS_DB_USER: webuser
+      WORDPRESS_DB_PASSWORD: abc
+      WORDPRESS_DB_NAME: website
+    restart: always
+    networks:
+      - website
+  db-b:
+    image: mariadb:latest
+    container_name: db-b
+    environment:
+      MARIADB_ROOT_PASSWORD: abc
+      MARIADB_DATABASE: website
+      MARIADB_USER: webuser
+      MARIADB_PASSWORD: abc
+    volumes:
+      - ./web-b/db:/var/lib/mysql
+    expose:
+      - "3306"
+    hostname: db-b
+    restart: always
+    networks:
+      - website
+  web-b:
+    image: wordpress:latest
+    container_name: web-b
+    hostname: web-b
+    depends_on:
+      - db-b
+    expose:
+      - "80"
+    volumes:
+      - ./web-b/wp:/var/www/html
+    environment:
+      VIRTUAL_HOST: web-b.local
+      WORDPRESS_DB_HOST: db-b:3306
+      WORDPRESS_DB_USER: webuser
+      WORDPRESS_DB_PASSWORD: abc
+      WORDPRESS_DB_NAME: website
+    restart: always
+    networks:
+      - website
+  default:
+    image: nginx:latest
+    container_name: default
+    environment:
+      - VIRTUAL_HOST=_
+    volumes:
+      - ./default:/usr/share/nginx/html:ro
+    restart: always
+    networks:
+      - website
+networks:
+  website:
+    external: true
+
+
+5. Running Docker compose pada directory website
+
+pastikan kita berada didalam directory /home/docker/website
+
+docker-compose up -d --build
+
+6. Setting konfigurasi /etc/hosts
+
+pastikan berada pada directory /home/docker
+
+sudo nano /etc/hosts
+
+192.168.1.131   web-a.local
+
+Jika ingin mengakses dari pc host atau windows ubah file di local disk C:/windows/system32/drivers/etc/host
+
